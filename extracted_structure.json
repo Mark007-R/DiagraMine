@@ -1,0 +1,706 @@
+{
+  "diagram_analysis": {
+    "summary": {
+      "text_labels": 15,
+      "boxes": 15,
+      "regions": 4,
+      "arrows": 14,
+      "icons": 5,
+      "relationships": 10
+    },
+    "texts": [
+      {
+        "text": "Server Website",
+        "position": {
+          "x": 223,
+          "y": 33,
+          "w": 95,
+          "h": 17
+        },
+        "confidence": 0.942,
+        "parent_box": 4
+      },
+      {
+        "text": "Plant An App AWS",
+        "position": {
+          "x": 225,
+          "y": 109,
+          "w": 145,
+          "h": 21
+        },
+        "confidence": 1.0,
+        "parent_box": 3
+      },
+      {
+        "text": "On-prem hardware",
+        "position": {
+          "x": 657,
+          "y": 111,
+          "w": 115,
+          "h": 17
+        },
+        "confidence": 1.0,
+        "parent_box": 9
+      },
+      {
+        "text": "Elasticsearch Serverless",
+        "position": {
+          "x": 1001,
+          "y": 113,
+          "w": 175,
+          "h": 19
+        },
+        "confidence": 0.723,
+        "parent_box": 2
+      },
+      {
+        "text": "Front-End",
+        "position": {
+          "x": 66,
+          "y": 168,
+          "w": 95,
+          "h": 25
+        },
+        "confidence": 1.0,
+        "parent_box": null
+      },
+      {
+        "text": "Back-End",
+        "position": {
+          "x": 250,
+          "y": 168,
+          "w": 93,
+          "h": 25
+        },
+        "confidence": 0.958,
+        "parent_box": null
+      },
+      {
+        "text": "docker",
+        "position": {
+          "x": 599,
+          "y": 223,
+          "w": 47,
+          "h": 15
+        },
+        "confidence": 0.989,
+        "parent_box": 7
+      },
+      {
+        "text": "Search U",
+        "position": {
+          "x": 79,
+          "y": 237,
+          "w": 67,
+          "h": 17
+        },
+        "confidence": 1.0,
+        "parent_box": 14
+      },
+      {
+        "text": "Elastic Language Client",
+        "position": {
+          "x": 245,
+          "y": 231,
+          "w": 105,
+          "h": 31
+        },
+        "confidence": 1.0,
+        "parent_box": 10
+      },
+      {
+        "text": "Elastic Connector for MS SQL",
+        "position": {
+          "x": 605,
+          "y": 236,
+          "w": 129,
+          "h": 34
+        },
+        "confidence": 0.997,
+        "parent_box": 7
+      },
+      {
+        "text": "Indices",
+        "position": {
+          "x": 949,
+          "y": 237,
+          "w": 47,
+          "h": 17
+        },
+        "confidence": 1.0,
+        "parent_box": 6
+      },
+      {
+        "text": "ELSER Model",
+        "position": {
+          "x": 1115,
+          "y": 235,
+          "w": 87,
+          "h": 19
+        },
+        "confidence": 0.657,
+        "parent_box": 8
+      },
+      {
+        "text": "VPN",
+        "position": {
+          "x": 519,
+          "y": 265,
+          "w": 31,
+          "h": 15
+        },
+        "confidence": 1.0,
+        "parent_box": null
+      },
+      {
+        "text": "Database",
+        "position": {
+          "x": 413,
+          "y": 305,
+          "w": 83,
+          "h": 21
+        },
+        "confidence": 0.506,
+        "parent_box": null
+      },
+      {
+        "text": "DB",
+        "position": {
+          "x": 783,
+          "y": 349,
+          "w": 23,
+          "h": 17
+        },
+        "confidence": 1.0,
+        "parent_box": null
+      }
+    ],
+    "boxes": [
+      {
+        "label": "Elastic Language Client",
+        "position": {
+          "x": 216,
+          "y": 191,
+          "w": 180,
+          "h": 118
+        },
+        "entity_type": "search",
+        "parent_region": 147
+      },
+      {
+        "label": "ELSER Model",
+        "position": {
+          "x": 1082,
+          "y": 172,
+          "w": 136,
+          "h": 122
+        },
+        "entity_type": "search",
+        "parent_region": 8
+      },
+      {
+        "label": "Elasticsearch Serverless",
+        "position": {
+          "x": 939,
+          "y": 89,
+          "w": 241,
+          "h": 63
+        },
+        "entity_type": "platform",
+        "parent_region": 8
+      },
+      {
+        "label": "Plant An App AWS",
+        "position": {
+          "x": 152,
+          "y": 87,
+          "w": 241,
+          "h": 63
+        },
+        "entity_type": "platform",
+        "parent_region": 146
+      },
+      {
+        "label": "Server Website",
+        "position": {
+          "x": 149,
+          "y": 9,
+          "w": 241,
+          "h": 63
+        },
+        "entity_type": "platform",
+        "parent_region": 141
+      },
+      {
+        "label": "Search U",
+        "position": {
+          "x": 50,
+          "y": 192,
+          "w": 127,
+          "h": 117
+        },
+        "entity_type": "search",
+        "parent_region": 147
+      },
+      {
+        "label": "Indices",
+        "position": {
+          "x": 903,
+          "y": 194,
+          "w": 145,
+          "h": 101
+        },
+        "entity_type": "data_store",
+        "parent_region": 8
+      },
+      {
+        "label": "docker | Elastic Connector for MS SQL",
+        "position": {
+          "x": 598,
+          "y": 196,
+          "w": 141,
+          "h": 96
+        },
+        "entity_type": "data_store",
+        "parent_region": 102
+      },
+      {
+        "label": "ELSER Model",
+        "position": {
+          "x": 1106,
+          "y": 198,
+          "w": 108,
+          "h": 92
+        },
+        "entity_type": "search",
+        "parent_region": 8
+      },
+      {
+        "label": "On-prem hardware",
+        "position": {
+          "x": 637,
+          "y": 87,
+          "w": 153,
+          "h": 63
+        },
+        "entity_type": "component",
+        "parent_region": 70
+      },
+      {
+        "label": "Elastic Language Client",
+        "position": {
+          "x": 242,
+          "y": 213,
+          "w": 108,
+          "h": 63
+        },
+        "entity_type": "search",
+        "parent_region": 147
+      },
+      {
+        "label": "",
+        "position": {
+          "x": 767,
+          "y": 268,
+          "w": 49,
+          "h": 76
+        },
+        "entity_type": "component",
+        "parent_region": 102
+      },
+      {
+        "label": "",
+        "position": {
+          "x": 419,
+          "y": 240,
+          "w": 61,
+          "h": 60
+        },
+        "entity_type": "component",
+        "parent_region": 147
+      },
+      {
+        "label": "",
+        "position": {
+          "x": 157,
+          "y": 91,
+          "w": 54,
+          "h": 53
+        },
+        "entity_type": "component",
+        "parent_region": 146
+      },
+      {
+        "label": "Search U",
+        "position": {
+          "x": 76,
+          "y": 230,
+          "w": 75,
+          "h": 29
+        },
+        "entity_type": "search",
+        "parent_region": 147
+      }
+    ],
+    "regions": [
+      {
+        "label": "Server Website | Plant An App AWS | Front-End | Back-End | Search U | Elastic Language Client | VPN | Database",
+        "position": {
+          "x": 10,
+          "y": 5,
+          "w": 538,
+          "h": 382
+        },
+        "children_count": 1
+      },
+      {
+        "label": "Front-End | Back-End | Search U | Elastic Language Client | Database",
+        "position": {
+          "x": 32,
+          "y": 120,
+          "w": 475,
+          "h": 231
+        },
+        "children_count": 5
+      },
+      {
+        "label": "Elasticsearch Serverless | Indices | ELSER Model",
+        "position": {
+          "x": 876,
+          "y": 85,
+          "w": 363,
+          "h": 292
+        },
+        "children_count": 0
+      },
+      {
+        "label": "On-prem hardware | docker | Elastic Connector for MS SQL | DB",
+        "position": {
+          "x": 575,
+          "y": 82,
+          "w": 278,
+          "h": 298
+        },
+        "children_count": 1
+      }
+    ],
+    "arrows": [
+      {
+        "start": {
+          "x": 152,
+          "y": 244
+        },
+        "end": {
+          "x": 241,
+          "y": 244
+        },
+        "direction": "horizontal",
+        "line_style": "dashed",
+        "technique": ""
+      },
+      {
+        "start": {
+          "x": 373,
+          "y": 278
+        },
+        "end": {
+          "x": 431,
+          "y": 278
+        },
+        "direction": "horizontal",
+        "line_style": "dashed",
+        "technique": ""
+      },
+      {
+        "start": {
+          "x": 396,
+          "y": 170
+        },
+        "end": {
+          "x": 1153,
+          "y": 170
+        },
+        "direction": "horizontal",
+        "line_style": "dashed",
+        "technique": ""
+      },
+      {
+        "start": {
+          "x": 482,
+          "y": 270
+        },
+        "end": {
+          "x": 521,
+          "y": 270
+        },
+        "direction": "horizontal",
+        "line_style": "dashed",
+        "technique": ""
+      },
+      {
+        "start": {
+          "x": 553,
+          "y": 243
+        },
+        "end": {
+          "x": 614,
+          "y": 243
+        },
+        "direction": "horizontal",
+        "line_style": "dashed",
+        "technique": ""
+      },
+      {
+        "start": {
+          "x": 745,
+          "y": 244
+        },
+        "end": {
+          "x": 916,
+          "y": 244
+        },
+        "direction": "horizontal",
+        "line_style": "dashed",
+        "technique": ""
+      },
+      {
+        "start": {
+          "x": 1026,
+          "y": 267
+        },
+        "end": {
+          "x": 1100,
+          "y": 267
+        },
+        "direction": "horizontal",
+        "line_style": "dashed",
+        "technique": ""
+      },
+      {
+        "start": {
+          "x": 1031,
+          "y": 220
+        },
+        "end": {
+          "x": 1105,
+          "y": 220
+        },
+        "direction": "horizontal",
+        "line_style": "dashed",
+        "technique": ""
+      },
+      {
+        "start": {
+          "x": 398,
+          "y": 182
+        },
+        "end": {
+          "x": 398,
+          "y": 226
+        },
+        "direction": "vertical",
+        "line_style": "dashed",
+        "technique": ""
+      },
+      {
+        "start": {
+          "x": 790,
+          "y": 252
+        },
+        "end": {
+          "x": 790,
+          "y": 290
+        },
+        "direction": "vertical",
+        "line_style": "dashed",
+        "technique": ""
+      },
+      {
+        "start": {
+          "x": 1160,
+          "y": 170
+        },
+        "end": {
+          "x": 1160,
+          "y": 198
+        },
+        "direction": "vertical",
+        "line_style": "dashed",
+        "technique": ""
+      },
+      {
+        "start": {
+          "x": 350,
+          "y": 244
+        },
+        "end": {
+          "x": 398,
+          "y": 244
+        },
+        "direction": "horizontal",
+        "line_style": "dashed",
+        "technique": ""
+      },
+      {
+        "start": {
+          "x": 739,
+          "y": 244
+        },
+        "end": {
+          "x": 790,
+          "y": 244
+        },
+        "direction": "horizontal",
+        "line_style": "dashed",
+        "technique": ""
+      },
+      {
+        "start": {
+          "x": 534,
+          "y": 243
+        },
+        "end": {
+          "x": 534,
+          "y": 265
+        },
+        "direction": "vertical",
+        "line_style": "dashed",
+        "technique": ""
+      }
+    ],
+    "icons": [
+      {
+        "position": {
+          "x": 427,
+          "y": 241,
+          "w": 52,
+          "h": 58
+        },
+        "label": "icon",
+        "parent_box": 12
+      },
+      {
+        "position": {
+          "x": 768,
+          "y": 288,
+          "w": 47,
+          "h": 55
+        },
+        "label": "icon",
+        "parent_box": 11
+      },
+      {
+        "position": {
+          "x": 159,
+          "y": 92,
+          "w": 51,
+          "h": 50
+        },
+        "label": "icon",
+        "parent_box": 13
+      },
+      {
+        "position": {
+          "x": 599,
+          "y": 199,
+          "w": 41,
+          "h": 34
+        },
+        "label": "icon",
+        "parent_box": 7
+      },
+      {
+        "position": {
+          "x": 955,
+          "y": 97,
+          "w": 30,
+          "h": 35
+        },
+        "label": "icon",
+        "parent_box": 2
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Search U",
+        "target": "Elastic Language Client",
+        "line_style": "dashed",
+        "direction": "horizontal",
+        "relationship": "connects_to",
+        "detected": true
+      },
+      {
+        "source": "docker | Elastic Connector for MS SQL",
+        "target": "Indices",
+        "line_style": "dashed",
+        "direction": "horizontal",
+        "relationship": "connects_to",
+        "detected": true
+      },
+      {
+        "source": "Indices",
+        "target": "ELSER Model",
+        "line_style": "dashed",
+        "direction": "horizontal",
+        "relationship": "connects_to",
+        "detected": true
+      },
+      {
+        "source": "Server Website",
+        "target": "Plant An App - AWS",
+        "line_style": "solid",
+        "direction": "vertical",
+        "relationship": "hosts",
+        "detected": false
+      },
+      {
+        "source": "Search UI",
+        "target": "Elastic Language Client",
+        "line_style": "solid",
+        "direction": "horizontal",
+        "relationship": "queries",
+        "detected": false
+      },
+      {
+        "source": "Elastic Language Client",
+        "target": "Database",
+        "line_style": "solid",
+        "direction": "vertical",
+        "relationship": "reads_from",
+        "detected": false
+      },
+      {
+        "source": "Database",
+        "target": "Elastic Connector for MS SQL",
+        "line_style": "dashed",
+        "direction": "horizontal",
+        "relationship": "syncs_via_vpn",
+        "detected": false
+      },
+      {
+        "source": "Elastic Connector for MS SQL",
+        "target": "DB",
+        "line_style": "dashed",
+        "direction": "vertical",
+        "relationship": "reads_from",
+        "detected": false
+      },
+      {
+        "source": "Elastic Connector for MS SQL",
+        "target": "Indices",
+        "line_style": "dashed",
+        "direction": "horizontal",
+        "relationship": "indexes_to",
+        "detected": false
+      },
+      {
+        "source": "Elastic Language Client",
+        "target": "Elasticsearch Serverless",
+        "line_style": "dashed",
+        "direction": "horizontal",
+        "relationship": "searches",
+        "detected": false
+      }
+    ]
+  }
+}
