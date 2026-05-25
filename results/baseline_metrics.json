@@ -1,0 +1,1984 @@
+{
+  "metadata": {
+    "date": "2026-05-25",
+    "day": 1,
+    "project": "DiagraMine",
+    "benchmark_size": 15,
+    "benchmark_dir": "data/eval/diagrams_15/",
+    "fuzzy_match_threshold": 0.6
+  },
+  "per_diagram_with_known": {
+    "diagram_01.png": {
+      "components": {
+        "detected": 3,
+        "ground_truth": 4,
+        "tp": 3,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.857,
+        "detected_labels": [
+          "Database",
+          "#eb Server",
+          "Browser-"
+        ]
+      },
+      "relationships": {
+        "detected": 8,
+        "ground_truth": 3,
+        "tp": 0,
+        "fp": 8,
+        "fn": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [
+          [
+            "Server Website",
+            "Plant An App - AWS"
+          ],
+          [
+            "Search UI",
+            "Elastic Language Client"
+          ],
+          [
+            "Elastic Language Client",
+            "Database"
+          ],
+          [
+            "Database",
+            "Elastic Connector for MS SQL"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "DB"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Indices",
+            "ELSER Model"
+          ],
+          [
+            "Elastic Language Client",
+            "Elasticsearch Serverless"
+          ]
+        ],
+        "from_known_connections": 8
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 12.64,
+      "schema_valid_json": true
+    },
+    "diagram_02.png": {
+      "components": {
+        "detected": 8,
+        "ground_truth": 6,
+        "tp": 6,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.857,
+        "detected_labels": [
+          "API Gateway",
+          "Orders DB",
+          "Order Svc",
+          "User Svc",
+          "Client App",
+          "Payment Svc",
+          "Payment Svc",
+          "API Gateway"
+        ]
+      },
+      "relationships": {
+        "detected": 9,
+        "ground_truth": 5,
+        "tp": 1,
+        "fp": 8,
+        "fn": 4,
+        "precision": 0.111,
+        "recall": 0.2,
+        "f1": 0.143,
+        "detected_pairs": [
+          [
+            "Client App",
+            "API Gateway"
+          ],
+          [
+            "Server Website",
+            "Plant An App - AWS"
+          ],
+          [
+            "Search UI",
+            "Elastic Language Client"
+          ],
+          [
+            "Elastic Language Client",
+            "Database"
+          ],
+          [
+            "Database",
+            "Elastic Connector for MS SQL"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "DB"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Indices",
+            "ELSER Model"
+          ],
+          [
+            "Elastic Language Client",
+            "Elasticsearch Serverless"
+          ]
+        ],
+        "from_known_connections": 8
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 16.93,
+      "schema_valid_json": true
+    },
+    "diagram_03.png": {
+      "components": {
+        "detected": 7,
+        "ground_truth": 6,
+        "tp": 3,
+        "fp": 4,
+        "fn": 3,
+        "precision": 0.429,
+        "recall": 0.5,
+        "f1": 0.462,
+        "detected_labels": [
+          "Producer_A",
+          "Consumer €",
+          "Producer B",
+          "eensumer B",
+          "Consumer A",
+          "Mesrage Broker",
+          ""
+        ]
+      },
+      "relationships": {
+        "detected": 9,
+        "ground_truth": 5,
+        "tp": 0,
+        "fp": 9,
+        "fn": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [
+          [
+            "Mesrage Broker",
+            "eensumer B"
+          ],
+          [
+            "Server Website",
+            "Plant An App - AWS"
+          ],
+          [
+            "Search UI",
+            "Elastic Language Client"
+          ],
+          [
+            "Elastic Language Client",
+            "Database"
+          ],
+          [
+            "Database",
+            "Elastic Connector for MS SQL"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "DB"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Indices",
+            "ELSER Model"
+          ],
+          [
+            "Elastic Language Client",
+            "Elasticsearch Serverless"
+          ]
+        ],
+        "from_known_connections": 8
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 14.59,
+      "schema_valid_json": true
+    },
+    "diagram_04.png": {
+      "components": {
+        "detected": 4,
+        "ground_truth": 4,
+        "tp": 1,
+        "fp": 3,
+        "fn": 3,
+        "precision": 0.25,
+        "recall": 0.25,
+        "f1": 0.25,
+        "detected_labels": [
+          "{Redshift",
+          "ISlue Job",
+          "Lainbda Fune",
+          "53 Souree -"
+        ]
+      },
+      "relationships": {
+        "detected": 10,
+        "ground_truth": 3,
+        "tp": 0,
+        "fp": 10,
+        "fn": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [
+          [
+            "53 Souree -",
+            "Lainbda Fune"
+          ],
+          [
+            "ISlue Job",
+            "{Redshift"
+          ],
+          [
+            "Server Website",
+            "Plant An App - AWS"
+          ],
+          [
+            "Search UI",
+            "Elastic Language Client"
+          ],
+          [
+            "Elastic Language Client",
+            "Database"
+          ],
+          [
+            "Database",
+            "Elastic Connector for MS SQL"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "DB"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Indices",
+            "ELSER Model"
+          ],
+          [
+            "Elastic Language Client",
+            "Elasticsearch Serverless"
+          ]
+        ],
+        "from_known_connections": 8
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 14.93,
+      "schema_valid_json": true
+    },
+    "diagram_05.png": {
+      "components": {
+        "detected": 6,
+        "ground_truth": 5,
+        "tp": 5,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.833,
+        "recall": 1.0,
+        "f1": 0.909,
+        "detected_labels": [
+          "Ingress",
+          "Pod B",
+          "Pod A",
+          "Service",
+          "Pod C",
+          "Ingress"
+        ]
+      },
+      "relationships": {
+        "detected": 9,
+        "ground_truth": 4,
+        "tp": 1,
+        "fp": 8,
+        "fn": 3,
+        "precision": 0.111,
+        "recall": 0.25,
+        "f1": 0.154,
+        "detected_pairs": [
+          [
+            "Service",
+            "Pod B"
+          ],
+          [
+            "Server Website",
+            "Plant An App - AWS"
+          ],
+          [
+            "Search UI",
+            "Elastic Language Client"
+          ],
+          [
+            "Elastic Language Client",
+            "Database"
+          ],
+          [
+            "Database",
+            "Elastic Connector for MS SQL"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "DB"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Indices",
+            "ELSER Model"
+          ],
+          [
+            "Elastic Language Client",
+            "Elasticsearch Serverless"
+          ]
+        ],
+        "from_known_connections": 8
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 13.29,
+      "schema_valid_json": true
+    },
+    "diagram_06.png": {
+      "components": {
+        "detected": 8,
+        "ground_truth": 5,
+        "tp": 5,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.625,
+        "recall": 1.0,
+        "f1": 0.769,
+        "detected_labels": [
+          "Replica 3",
+          "Replica 1",
+          "Replica 2",
+          "Master DB",
+          "App",
+          "Replica 3",
+          "Replica 2",
+          "Replica 1"
+        ]
+      },
+      "relationships": {
+        "detected": 8,
+        "ground_truth": 4,
+        "tp": 0,
+        "fp": 8,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [
+          [
+            "Server Website",
+            "Plant An App - AWS"
+          ],
+          [
+            "Search UI",
+            "Elastic Language Client"
+          ],
+          [
+            "Elastic Language Client",
+            "Database"
+          ],
+          [
+            "Database",
+            "Elastic Connector for MS SQL"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "DB"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Indices",
+            "ELSER Model"
+          ],
+          [
+            "Elastic Language Client",
+            "Elasticsearch Serverless"
+          ]
+        ],
+        "from_known_connections": 8
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 13.96,
+      "schema_valid_json": true
+    },
+    "diagram_07.png": {
+      "components": {
+        "detected": 4,
+        "ground_truth": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "detected_labels": [
+          "Web 3",
+          "Web 1",
+          "Web 2",
+          "Load Balancer"
+        ]
+      },
+      "relationships": {
+        "detected": 8,
+        "ground_truth": 3,
+        "tp": 0,
+        "fp": 8,
+        "fn": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [
+          [
+            "Server Website",
+            "Plant An App - AWS"
+          ],
+          [
+            "Search UI",
+            "Elastic Language Client"
+          ],
+          [
+            "Elastic Language Client",
+            "Database"
+          ],
+          [
+            "Database",
+            "Elastic Connector for MS SQL"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "DB"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Indices",
+            "ELSER Model"
+          ],
+          [
+            "Elastic Language Client",
+            "Elasticsearch Serverless"
+          ]
+        ],
+        "from_known_connections": 8
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 12.0,
+      "schema_valid_json": true
+    },
+    "diagram_08.png": {
+      "components": {
+        "detected": 3,
+        "ground_truth": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "detected_labels": [
+          "'atabase",
+          "Cache",
+          "App"
+        ]
+      },
+      "relationships": {
+        "detected": 9,
+        "ground_truth": 3,
+        "tp": 1,
+        "fp": 8,
+        "fn": 2,
+        "precision": 0.111,
+        "recall": 0.333,
+        "f1": 0.167,
+        "detected_pairs": [
+          [
+            "Cache",
+            "'atabase"
+          ],
+          [
+            "Server Website",
+            "Plant An App - AWS"
+          ],
+          [
+            "Search UI",
+            "Elastic Language Client"
+          ],
+          [
+            "Elastic Language Client",
+            "Database"
+          ],
+          [
+            "Database",
+            "Elastic Connector for MS SQL"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "DB"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Indices",
+            "ELSER Model"
+          ],
+          [
+            "Elastic Language Client",
+            "Elasticsearch Serverless"
+          ]
+        ],
+        "from_known_connections": 8
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 11.85,
+      "schema_valid_json": true
+    },
+    "diagram_09.png": {
+      "components": {
+        "detected": 6,
+        "ground_truth": 4,
+        "tp": 3,
+        "fp": 3,
+        "fn": 1,
+        "precision": 0.5,
+        "recall": 0.75,
+        "f1": 0.6,
+        "detected_labels": [
+          "Warehouse",
+          "Source DB-",
+          "~Extract-",
+          "",
+          "",
+          "ransforn"
+        ]
+      },
+      "relationships": {
+        "detected": 10,
+        "ground_truth": 3,
+        "tp": 1,
+        "fp": 9,
+        "fn": 2,
+        "precision": 0.1,
+        "recall": 0.333,
+        "f1": 0.154,
+        "detected_pairs": [
+          [
+            "Source DB-",
+            "~Extract-"
+          ],
+          [
+            "~Extract-",
+            "Warehouse"
+          ],
+          [
+            "Server Website",
+            "Plant An App - AWS"
+          ],
+          [
+            "Search UI",
+            "Elastic Language Client"
+          ],
+          [
+            "Elastic Language Client",
+            "Database"
+          ],
+          [
+            "Database",
+            "Elastic Connector for MS SQL"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "DB"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Indices",
+            "ELSER Model"
+          ],
+          [
+            "Elastic Language Client",
+            "Elasticsearch Serverless"
+          ]
+        ],
+        "from_known_connections": 8
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 13.67,
+      "schema_valid_json": true
+    },
+    "diagram_10.png": {
+      "components": {
+        "detected": 6,
+        "ground_truth": 5,
+        "tp": 5,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.833,
+        "recall": 1.0,
+        "f1": 0.909,
+        "detected_labels": [
+          "Read DB",
+          "Event Bus -",
+          "Command API",
+          "Write DB",
+          "Query API",
+          "Query API"
+        ]
+      },
+      "relationships": {
+        "detected": 9,
+        "ground_truth": 4,
+        "tp": 1,
+        "fp": 8,
+        "fn": 3,
+        "precision": 0.111,
+        "recall": 0.25,
+        "f1": 0.154,
+        "detected_pairs": [
+          [
+            "Event Bus -",
+            "Read DB"
+          ],
+          [
+            "Server Website",
+            "Plant An App - AWS"
+          ],
+          [
+            "Search UI",
+            "Elastic Language Client"
+          ],
+          [
+            "Elastic Language Client",
+            "Database"
+          ],
+          [
+            "Database",
+            "Elastic Connector for MS SQL"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "DB"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Indices",
+            "ELSER Model"
+          ],
+          [
+            "Elastic Language Client",
+            "Elasticsearch Serverless"
+          ]
+        ],
+        "from_known_connections": 8
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 14.01,
+      "schema_valid_json": true
+    },
+    "diagram_11.png": {
+      "components": {
+        "detected": 7,
+        "ground_truth": 5,
+        "tp": 4,
+        "fp": 3,
+        "fn": 1,
+        "precision": 0.571,
+        "recall": 0.8,
+        "f1": 0.667,
+        "detected_labels": [
+          "Shipping Step",
+          "Orchestrator",
+          "Order Step",
+          "Saga Log",
+          "",
+          "",
+          "Shipping Step"
+        ]
+      },
+      "relationships": {
+        "detected": 8,
+        "ground_truth": 4,
+        "tp": 0,
+        "fp": 8,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [
+          [
+            "Server Website",
+            "Plant An App - AWS"
+          ],
+          [
+            "Search UI",
+            "Elastic Language Client"
+          ],
+          [
+            "Elastic Language Client",
+            "Database"
+          ],
+          [
+            "Database",
+            "Elastic Connector for MS SQL"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "DB"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Indices",
+            "ELSER Model"
+          ],
+          [
+            "Elastic Language Client",
+            "Elasticsearch Serverless"
+          ]
+        ],
+        "from_known_connections": 8
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 14.16,
+      "schema_valid_json": true
+    },
+    "diagram_12.png": {
+      "components": {
+        "detected": 4,
+        "ground_truth": 4,
+        "tp": 3,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 0.75,
+        "detected_labels": [
+          "Remote Svc",
+          "Gireuit Breaker",
+          "Caller__",
+          "Fallback"
+        ]
+      },
+      "relationships": {
+        "detected": 9,
+        "ground_truth": 3,
+        "tp": 0,
+        "fp": 9,
+        "fn": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [
+          [
+            "Caller__",
+            "Remote Svc"
+          ],
+          [
+            "Server Website",
+            "Plant An App - AWS"
+          ],
+          [
+            "Search UI",
+            "Elastic Language Client"
+          ],
+          [
+            "Elastic Language Client",
+            "Database"
+          ],
+          [
+            "Database",
+            "Elastic Connector for MS SQL"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "DB"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Indices",
+            "ELSER Model"
+          ],
+          [
+            "Elastic Language Client",
+            "Elasticsearch Serverless"
+          ]
+        ],
+        "from_known_connections": 8
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 12.83,
+      "schema_valid_json": true
+    },
+    "diagram_13.png": {
+      "components": {
+        "detected": 5,
+        "ground_truth": 5,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "detected_labels": [
+          "Core Svc",
+          "Mobile BFF",
+          "Web BFF",
+          "Mobile Client",
+          "Web Client"
+        ]
+      },
+      "relationships": {
+        "detected": 8,
+        "ground_truth": 4,
+        "tp": 0,
+        "fp": 8,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [
+          [
+            "Server Website",
+            "Plant An App - AWS"
+          ],
+          [
+            "Search UI",
+            "Elastic Language Client"
+          ],
+          [
+            "Elastic Language Client",
+            "Database"
+          ],
+          [
+            "Database",
+            "Elastic Connector for MS SQL"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "DB"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Indices",
+            "ELSER Model"
+          ],
+          [
+            "Elastic Language Client",
+            "Elasticsearch Serverless"
+          ]
+        ],
+        "from_known_connections": 8
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 16.32,
+      "schema_valid_json": true
+    },
+    "diagram_14.png": {
+      "components": {
+        "detected": 8,
+        "ground_truth": 5,
+        "tp": 5,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.625,
+        "recall": 1.0,
+        "f1": 0.769,
+        "detected_labels": [
+          "MQ Adapter",
+          "CLI Adapter",
+          "Domain Core",
+          "DB Adapter",
+          "HTTP Adapter",
+          "MQ Adapter",
+          "CLI Adapter",
+          "DB Adapter"
+        ]
+      },
+      "relationships": {
+        "detected": 8,
+        "ground_truth": 4,
+        "tp": 0,
+        "fp": 8,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [
+          [
+            "Server Website",
+            "Plant An App - AWS"
+          ],
+          [
+            "Search UI",
+            "Elastic Language Client"
+          ],
+          [
+            "Elastic Language Client",
+            "Database"
+          ],
+          [
+            "Database",
+            "Elastic Connector for MS SQL"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "DB"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Indices",
+            "ELSER Model"
+          ],
+          [
+            "Elastic Language Client",
+            "Elasticsearch Serverless"
+          ]
+        ],
+        "from_known_connections": 8
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 17.53,
+      "schema_valid_json": true
+    },
+    "search_interview_test.png": {
+      "components": {
+        "detected": 15,
+        "ground_truth": 10,
+        "tp": 8,
+        "fp": 7,
+        "fn": 2,
+        "precision": 0.533,
+        "recall": 0.8,
+        "f1": 0.64,
+        "detected_labels": [
+          "Elastic Language Client",
+          "ELSER Model",
+          "Elasticsearch Serverless",
+          "Plant An App AWS",
+          "Server Website",
+          "Search U",
+          "Indices",
+          "docker | Elastic Connector for MS SQL",
+          "ELSER Model",
+          "On-prem hardware",
+          "Elastic Language Client",
+          "",
+          "",
+          "",
+          "Search U"
+        ]
+      },
+      "relationships": {
+        "detected": 10,
+        "ground_truth": 8,
+        "tp": 8,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.889,
+        "detected_pairs": [
+          [
+            "Search U",
+            "Elastic Language Client"
+          ],
+          [
+            "docker | Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Indices",
+            "ELSER Model"
+          ],
+          [
+            "Server Website",
+            "Plant An App - AWS"
+          ],
+          [
+            "Search UI",
+            "Elastic Language Client"
+          ],
+          [
+            "Elastic Language Client",
+            "Database"
+          ],
+          [
+            "Database",
+            "Elastic Connector for MS SQL"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "DB"
+          ],
+          [
+            "Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Elastic Language Client",
+            "Elasticsearch Serverless"
+          ]
+        ],
+        "from_known_connections": 7
+      },
+      "icons": {
+        "detected": 5,
+        "ground_truth": 2,
+        "tp": 2,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.571
+      },
+      "runtime_seconds": 11.83,
+      "schema_valid_json": true
+    }
+  },
+  "per_diagram_no_known": {
+    "diagram_01.png": {
+      "components": {
+        "detected": 3,
+        "ground_truth": 4,
+        "tp": 3,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.857,
+        "detected_labels": [
+          "Database",
+          "#eb Server",
+          "Browser-"
+        ]
+      },
+      "relationships": {
+        "detected": 0,
+        "ground_truth": 3,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [],
+        "from_known_connections": 0
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 14.67,
+      "schema_valid_json": true
+    },
+    "diagram_02.png": {
+      "components": {
+        "detected": 8,
+        "ground_truth": 6,
+        "tp": 6,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.857,
+        "detected_labels": [
+          "API Gateway",
+          "Orders DB",
+          "Order Svc",
+          "User Svc",
+          "Client App",
+          "Payment Svc",
+          "Payment Svc",
+          "API Gateway"
+        ]
+      },
+      "relationships": {
+        "detected": 1,
+        "ground_truth": 5,
+        "tp": 1,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1": 0.333,
+        "detected_pairs": [
+          [
+            "Client App",
+            "API Gateway"
+          ]
+        ],
+        "from_known_connections": 0
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 17.91,
+      "schema_valid_json": true
+    },
+    "diagram_03.png": {
+      "components": {
+        "detected": 7,
+        "ground_truth": 6,
+        "tp": 3,
+        "fp": 4,
+        "fn": 3,
+        "precision": 0.429,
+        "recall": 0.5,
+        "f1": 0.462,
+        "detected_labels": [
+          "Producer_A",
+          "Consumer €",
+          "Producer B",
+          "eensumer B",
+          "Consumer A",
+          "Mesrage Broker",
+          ""
+        ]
+      },
+      "relationships": {
+        "detected": 1,
+        "ground_truth": 5,
+        "tp": 0,
+        "fp": 1,
+        "fn": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [
+          [
+            "Mesrage Broker",
+            "eensumer B"
+          ]
+        ],
+        "from_known_connections": 0
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 24.29,
+      "schema_valid_json": true
+    },
+    "diagram_04.png": {
+      "components": {
+        "detected": 4,
+        "ground_truth": 4,
+        "tp": 1,
+        "fp": 3,
+        "fn": 3,
+        "precision": 0.25,
+        "recall": 0.25,
+        "f1": 0.25,
+        "detected_labels": [
+          "{Redshift",
+          "ISlue Job",
+          "Lainbda Fune",
+          "53 Souree -"
+        ]
+      },
+      "relationships": {
+        "detected": 2,
+        "ground_truth": 3,
+        "tp": 0,
+        "fp": 2,
+        "fn": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [
+          [
+            "53 Souree -",
+            "Lainbda Fune"
+          ],
+          [
+            "ISlue Job",
+            "{Redshift"
+          ]
+        ],
+        "from_known_connections": 0
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 16.7,
+      "schema_valid_json": true
+    },
+    "diagram_05.png": {
+      "components": {
+        "detected": 6,
+        "ground_truth": 5,
+        "tp": 5,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.833,
+        "recall": 1.0,
+        "f1": 0.909,
+        "detected_labels": [
+          "Ingress",
+          "Pod B",
+          "Pod A",
+          "Service",
+          "Pod C",
+          "Ingress"
+        ]
+      },
+      "relationships": {
+        "detected": 1,
+        "ground_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4,
+        "detected_pairs": [
+          [
+            "Service",
+            "Pod B"
+          ]
+        ],
+        "from_known_connections": 0
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 13.23,
+      "schema_valid_json": true
+    },
+    "diagram_06.png": {
+      "components": {
+        "detected": 8,
+        "ground_truth": 5,
+        "tp": 5,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.625,
+        "recall": 1.0,
+        "f1": 0.769,
+        "detected_labels": [
+          "Replica 3",
+          "Replica 1",
+          "Replica 2",
+          "Master DB",
+          "App",
+          "Replica 3",
+          "Replica 2",
+          "Replica 1"
+        ]
+      },
+      "relationships": {
+        "detected": 0,
+        "ground_truth": 4,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [],
+        "from_known_connections": 0
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 14.08,
+      "schema_valid_json": true
+    },
+    "diagram_07.png": {
+      "components": {
+        "detected": 4,
+        "ground_truth": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "detected_labels": [
+          "Web 3",
+          "Web 1",
+          "Web 2",
+          "Load Balancer"
+        ]
+      },
+      "relationships": {
+        "detected": 0,
+        "ground_truth": 3,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [],
+        "from_known_connections": 0
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 10.99,
+      "schema_valid_json": true
+    },
+    "diagram_08.png": {
+      "components": {
+        "detected": 3,
+        "ground_truth": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "detected_labels": [
+          "'atabase",
+          "Cache",
+          "App"
+        ]
+      },
+      "relationships": {
+        "detected": 1,
+        "ground_truth": 3,
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.333,
+        "f1": 0.5,
+        "detected_pairs": [
+          [
+            "Cache",
+            "'atabase"
+          ]
+        ],
+        "from_known_connections": 0
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 12.56,
+      "schema_valid_json": true
+    },
+    "diagram_09.png": {
+      "components": {
+        "detected": 6,
+        "ground_truth": 4,
+        "tp": 3,
+        "fp": 3,
+        "fn": 1,
+        "precision": 0.5,
+        "recall": 0.75,
+        "f1": 0.6,
+        "detected_labels": [
+          "Warehouse",
+          "Source DB-",
+          "~Extract-",
+          "",
+          "",
+          "ransforn"
+        ]
+      },
+      "relationships": {
+        "detected": 2,
+        "ground_truth": 3,
+        "tp": 1,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.5,
+        "recall": 0.333,
+        "f1": 0.4,
+        "detected_pairs": [
+          [
+            "Source DB-",
+            "~Extract-"
+          ],
+          [
+            "~Extract-",
+            "Warehouse"
+          ]
+        ],
+        "from_known_connections": 0
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 11.82,
+      "schema_valid_json": true
+    },
+    "diagram_10.png": {
+      "components": {
+        "detected": 6,
+        "ground_truth": 5,
+        "tp": 5,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.833,
+        "recall": 1.0,
+        "f1": 0.909,
+        "detected_labels": [
+          "Read DB",
+          "Event Bus -",
+          "Command API",
+          "Write DB",
+          "Query API",
+          "Query API"
+        ]
+      },
+      "relationships": {
+        "detected": 1,
+        "ground_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4,
+        "detected_pairs": [
+          [
+            "Event Bus -",
+            "Read DB"
+          ]
+        ],
+        "from_known_connections": 0
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 14.98,
+      "schema_valid_json": true
+    },
+    "diagram_11.png": {
+      "components": {
+        "detected": 7,
+        "ground_truth": 5,
+        "tp": 4,
+        "fp": 3,
+        "fn": 1,
+        "precision": 0.571,
+        "recall": 0.8,
+        "f1": 0.667,
+        "detected_labels": [
+          "Shipping Step",
+          "Orchestrator",
+          "Order Step",
+          "Saga Log",
+          "",
+          "",
+          "Shipping Step"
+        ]
+      },
+      "relationships": {
+        "detected": 0,
+        "ground_truth": 4,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [],
+        "from_known_connections": 0
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 15.39,
+      "schema_valid_json": true
+    },
+    "diagram_12.png": {
+      "components": {
+        "detected": 4,
+        "ground_truth": 4,
+        "tp": 3,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 0.75,
+        "detected_labels": [
+          "Remote Svc",
+          "Gireuit Breaker",
+          "Caller__",
+          "Fallback"
+        ]
+      },
+      "relationships": {
+        "detected": 1,
+        "ground_truth": 3,
+        "tp": 0,
+        "fp": 1,
+        "fn": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [
+          [
+            "Caller__",
+            "Remote Svc"
+          ]
+        ],
+        "from_known_connections": 0
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 15.52,
+      "schema_valid_json": true
+    },
+    "diagram_13.png": {
+      "components": {
+        "detected": 5,
+        "ground_truth": 5,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "detected_labels": [
+          "Core Svc",
+          "Mobile BFF",
+          "Web BFF",
+          "Mobile Client",
+          "Web Client"
+        ]
+      },
+      "relationships": {
+        "detected": 0,
+        "ground_truth": 4,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [],
+        "from_known_connections": 0
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 22.81,
+      "schema_valid_json": true
+    },
+    "diagram_14.png": {
+      "components": {
+        "detected": 8,
+        "ground_truth": 5,
+        "tp": 5,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.625,
+        "recall": 1.0,
+        "f1": 0.769,
+        "detected_labels": [
+          "MQ Adapter",
+          "CLI Adapter",
+          "Domain Core",
+          "DB Adapter",
+          "HTTP Adapter",
+          "MQ Adapter",
+          "CLI Adapter",
+          "DB Adapter"
+        ]
+      },
+      "relationships": {
+        "detected": 0,
+        "ground_truth": 4,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "detected_pairs": [],
+        "from_known_connections": 0
+      },
+      "icons": {
+        "detected": 0,
+        "ground_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "runtime_seconds": 13.75,
+      "schema_valid_json": true
+    },
+    "search_interview_test.png": {
+      "components": {
+        "detected": 15,
+        "ground_truth": 10,
+        "tp": 8,
+        "fp": 7,
+        "fn": 2,
+        "precision": 0.533,
+        "recall": 0.8,
+        "f1": 0.64,
+        "detected_labels": [
+          "Elastic Language Client",
+          "ELSER Model",
+          "Elasticsearch Serverless",
+          "Plant An App AWS",
+          "Server Website",
+          "Search U",
+          "Indices",
+          "docker | Elastic Connector for MS SQL",
+          "ELSER Model",
+          "On-prem hardware",
+          "Elastic Language Client",
+          "",
+          "",
+          "",
+          "Search U"
+        ]
+      },
+      "relationships": {
+        "detected": 3,
+        "ground_truth": 8,
+        "tp": 3,
+        "fp": 0,
+        "fn": 5,
+        "precision": 1.0,
+        "recall": 0.375,
+        "f1": 0.545,
+        "detected_pairs": [
+          [
+            "Search U",
+            "Elastic Language Client"
+          ],
+          [
+            "docker | Elastic Connector for MS SQL",
+            "Indices"
+          ],
+          [
+            "Indices",
+            "ELSER Model"
+          ]
+        ],
+        "from_known_connections": 0
+      },
+      "icons": {
+        "detected": 5,
+        "ground_truth": 2,
+        "tp": 2,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.571
+      },
+      "runtime_seconds": 11.92,
+      "schema_valid_json": true
+    }
+  },
+  "aggregate_with_known": {
+    "components": {
+      "macro_precision": 0.713,
+      "macro_recall": 0.84,
+      "macro_f1": 0.763
+    },
+    "relationships": {
+      "macro_precision": 0.09,
+      "macro_recall": 0.158,
+      "macro_f1": 0.111
+    },
+    "icons": {
+      "macro_precision": 0.027,
+      "macro_recall": 0.067,
+      "macro_f1": 0.038
+    },
+    "schema_valid_json_rate": 1.0,
+    "avg_runtime_seconds": 14.04
+  },
+  "aggregate_no_known": {
+    "components": {
+      "macro_precision": 0.713,
+      "macro_recall": 0.84,
+      "macro_f1": 0.763
+    },
+    "relationships": {
+      "macro_precision": 0.367,
+      "macro_recall": 0.116,
+      "macro_f1": 0.172
+    },
+    "icons": {
+      "macro_precision": 0.027,
+      "macro_recall": 0.067,
+      "macro_f1": 0.038
+    },
+    "schema_valid_json_rate": 1.0,
+    "avg_runtime_seconds": 15.37
+  }
+}
