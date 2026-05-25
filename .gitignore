@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+.Python
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# OS
+Thumbs.db
+ehthumbs.db
+
+# Project artifacts (regenerable)
+results/samples/*.png
+results/runs/
+*.pkl
+*.joblib
+
+# Pipeline outputs (regenerable from source images)
+# Keep aggregate metrics + reports under version control.
+
+# EasyOCR model cache
+.EasyOCR/
+
+# Logs
+*.log
+logs/

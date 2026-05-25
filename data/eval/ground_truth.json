@@ -1,0 +1,515 @@
+{
+  "diagram_01.png": {
+    "name": "3-tier web app",
+    "source": "synthetic-public-reference",
+    "components": [
+      "Browser",
+      "Web Server",
+      "App Server",
+      "Database"
+    ],
+    "arrows": [
+      {
+        "source": "Browser",
+        "target": "Web Server",
+        "style": "dashed"
+      },
+      {
+        "source": "Web Server",
+        "target": "App Server",
+        "style": "dashed"
+      },
+      {
+        "source": "App Server",
+        "target": "Database",
+        "style": "dashed"
+      }
+    ],
+    "icons": []
+  },
+  "diagram_02.png": {
+    "name": "Microservices with API gateway",
+    "source": "synthetic-public-reference",
+    "components": [
+      "Client App",
+      "API Gateway",
+      "User Svc",
+      "Order Svc",
+      "Payment Svc",
+      "Orders DB"
+    ],
+    "arrows": [
+      {
+        "source": "Client App",
+        "target": "API Gateway",
+        "style": "dashed"
+      },
+      {
+        "source": "API Gateway",
+        "target": "User Svc",
+        "style": "dashed"
+      },
+      {
+        "source": "API Gateway",
+        "target": "Order Svc",
+        "style": "dashed"
+      },
+      {
+        "source": "API Gateway",
+        "target": "Payment Svc",
+        "style": "dashed"
+      },
+      {
+        "source": "Order Svc",
+        "target": "Orders DB",
+        "style": "dashed"
+      }
+    ],
+    "icons": []
+  },
+  "diagram_03.png": {
+    "name": "Publish/subscribe messaging",
+    "source": "synthetic-public-reference",
+    "components": [
+      "Producer A",
+      "Producer B",
+      "Message Broker",
+      "Consumer A",
+      "Consumer B",
+      "Consumer C"
+    ],
+    "arrows": [
+      {
+        "source": "Producer A",
+        "target": "Message Broker",
+        "style": "dashed"
+      },
+      {
+        "source": "Producer B",
+        "target": "Message Broker",
+        "style": "dashed"
+      },
+      {
+        "source": "Message Broker",
+        "target": "Consumer A",
+        "style": "dashed"
+      },
+      {
+        "source": "Message Broker",
+        "target": "Consumer B",
+        "style": "dashed"
+      },
+      {
+        "source": "Message Broker",
+        "target": "Consumer C",
+        "style": "dashed"
+      }
+    ],
+    "icons": []
+  },
+  "diagram_04.png": {
+    "name": "AWS Lambda serverless ETL",
+    "source": "synthetic-public-reference",
+    "components": [
+      "S3 Source",
+      "Lambda Func",
+      "Glue Job",
+      "Redshift"
+    ],
+    "arrows": [
+      {
+        "source": "S3 Source",
+        "target": "Lambda Func",
+        "style": "dashed"
+      },
+      {
+        "source": "Lambda Func",
+        "target": "Glue Job",
+        "style": "dashed"
+      },
+      {
+        "source": "Glue Job",
+        "target": "Redshift",
+        "style": "dashed"
+      }
+    ],
+    "icons": []
+  },
+  "diagram_05.png": {
+    "name": "Kubernetes deployment/service/pod",
+    "source": "synthetic-public-reference",
+    "components": [
+      "Ingress",
+      "Service",
+      "Pod A",
+      "Pod B",
+      "Pod C"
+    ],
+    "arrows": [
+      {
+        "source": "Ingress",
+        "target": "Service",
+        "style": "dashed"
+      },
+      {
+        "source": "Service",
+        "target": "Pod A",
+        "style": "dashed"
+      },
+      {
+        "source": "Service",
+        "target": "Pod B",
+        "style": "dashed"
+      },
+      {
+        "source": "Service",
+        "target": "Pod C",
+        "style": "dashed"
+      }
+    ],
+    "icons": []
+  },
+  "diagram_06.png": {
+    "name": "Database master/replica",
+    "source": "synthetic-public-reference",
+    "components": [
+      "App",
+      "Master DB",
+      "Replica 1",
+      "Replica 2",
+      "Replica 3"
+    ],
+    "arrows": [
+      {
+        "source": "App",
+        "target": "Master DB",
+        "style": "dashed"
+      },
+      {
+        "source": "Master DB",
+        "target": "Replica 1",
+        "style": "dashed"
+      },
+      {
+        "source": "Master DB",
+        "target": "Replica 2",
+        "style": "dashed"
+      },
+      {
+        "source": "Master DB",
+        "target": "Replica 3",
+        "style": "dashed"
+      }
+    ],
+    "icons": []
+  },
+  "diagram_07.png": {
+    "name": "Load balancer + web servers",
+    "source": "synthetic-public-reference",
+    "components": [
+      "Load Balancer",
+      "Web 1",
+      "Web 2",
+      "Web 3"
+    ],
+    "arrows": [
+      {
+        "source": "Load Balancer",
+        "target": "Web 1",
+        "style": "dashed"
+      },
+      {
+        "source": "Load Balancer",
+        "target": "Web 2",
+        "style": "dashed"
+      },
+      {
+        "source": "Load Balancer",
+        "target": "Web 3",
+        "style": "dashed"
+      }
+    ],
+    "icons": []
+  },
+  "diagram_08.png": {
+    "name": "Cache-aside pattern",
+    "source": "synthetic-public-reference",
+    "components": [
+      "App",
+      "Cache",
+      "Database"
+    ],
+    "arrows": [
+      {
+        "source": "App",
+        "target": "Cache",
+        "style": "dashed"
+      },
+      {
+        "source": "App",
+        "target": "Database",
+        "style": "dashed"
+      },
+      {
+        "source": "Cache",
+        "target": "Database",
+        "style": "dashed"
+      }
+    ],
+    "icons": []
+  },
+  "diagram_09.png": {
+    "name": "ETL pipeline source/transform/warehouse",
+    "source": "synthetic-public-reference",
+    "components": [
+      "Source DB",
+      "Extract",
+      "Transform",
+      "Warehouse"
+    ],
+    "arrows": [
+      {
+        "source": "Source DB",
+        "target": "Extract",
+        "style": "dashed"
+      },
+      {
+        "source": "Extract",
+        "target": "Transform",
+        "style": "dashed"
+      },
+      {
+        "source": "Transform",
+        "target": "Warehouse",
+        "style": "dashed"
+      }
+    ],
+    "icons": []
+  },
+  "diagram_10.png": {
+    "name": "CQRS pattern",
+    "source": "synthetic-public-reference",
+    "components": [
+      "Command API",
+      "Write DB",
+      "Event Bus",
+      "Read DB",
+      "Query API"
+    ],
+    "arrows": [
+      {
+        "source": "Command API",
+        "target": "Write DB",
+        "style": "dashed"
+      },
+      {
+        "source": "Command API",
+        "target": "Event Bus",
+        "style": "dashed"
+      },
+      {
+        "source": "Event Bus",
+        "target": "Read DB",
+        "style": "dashed"
+      },
+      {
+        "source": "Query API",
+        "target": "Read DB",
+        "style": "dashed"
+      }
+    ],
+    "icons": []
+  },
+  "diagram_11.png": {
+    "name": "Saga distributed transaction",
+    "source": "synthetic-public-reference",
+    "components": [
+      "Orchestrator",
+      "Order Step",
+      "Payment Step",
+      "Shipping Step",
+      "Saga Log"
+    ],
+    "arrows": [
+      {
+        "source": "Orchestrator",
+        "target": "Order Step",
+        "style": "dashed"
+      },
+      {
+        "source": "Orchestrator",
+        "target": "Payment Step",
+        "style": "dashed"
+      },
+      {
+        "source": "Orchestrator",
+        "target": "Shipping Step",
+        "style": "dashed"
+      },
+      {
+        "source": "Orchestrator",
+        "target": "Saga Log",
+        "style": "dashed"
+      }
+    ],
+    "icons": []
+  },
+  "diagram_12.png": {
+    "name": "Circuit breaker pattern",
+    "source": "synthetic-public-reference",
+    "components": [
+      "Caller",
+      "Circuit Breaker",
+      "Remote Svc",
+      "Fallback"
+    ],
+    "arrows": [
+      {
+        "source": "Caller",
+        "target": "Circuit Breaker",
+        "style": "dashed"
+      },
+      {
+        "source": "Circuit Breaker",
+        "target": "Remote Svc",
+        "style": "dashed"
+      },
+      {
+        "source": "Circuit Breaker",
+        "target": "Fallback",
+        "style": "dashed"
+      }
+    ],
+    "icons": []
+  },
+  "diagram_13.png": {
+    "name": "Backend for Frontend",
+    "source": "synthetic-public-reference",
+    "components": [
+      "Web Client",
+      "Mobile Client",
+      "Web BFF",
+      "Mobile BFF",
+      "Core Svc"
+    ],
+    "arrows": [
+      {
+        "source": "Web Client",
+        "target": "Web BFF",
+        "style": "dashed"
+      },
+      {
+        "source": "Mobile Client",
+        "target": "Mobile BFF",
+        "style": "dashed"
+      },
+      {
+        "source": "Web BFF",
+        "target": "Core Svc",
+        "style": "dashed"
+      },
+      {
+        "source": "Mobile BFF",
+        "target": "Core Svc",
+        "style": "dashed"
+      }
+    ],
+    "icons": []
+  },
+  "diagram_14.png": {
+    "name": "Hexagonal architecture",
+    "source": "synthetic-public-reference",
+    "components": [
+      "HTTP Adapter",
+      "CLI Adapter",
+      "Domain Core",
+      "DB Adapter",
+      "MQ Adapter"
+    ],
+    "arrows": [
+      {
+        "source": "HTTP Adapter",
+        "target": "Domain Core",
+        "style": "dashed"
+      },
+      {
+        "source": "CLI Adapter",
+        "target": "Domain Core",
+        "style": "dashed"
+      },
+      {
+        "source": "Domain Core",
+        "target": "DB Adapter",
+        "style": "dashed"
+      },
+      {
+        "source": "Domain Core",
+        "target": "MQ Adapter",
+        "style": "dashed"
+      }
+    ],
+    "icons": []
+  },
+  "search_interview_test.png": {
+    "name": "Plant An App AWS (original test diagram)",
+    "source": "interview-test-original",
+    "components": [
+      "Server Website",
+      "Plant An App - AWS",
+      "Search UI",
+      "Elastic Language Client",
+      "Database",
+      "Elastic Connector for MS SQL",
+      "DB",
+      "Elasticsearch Serverless",
+      "Indices",
+      "ELSER Model"
+    ],
+    "arrows": [
+      {
+        "source": "Server Website",
+        "target": "Plant An App - AWS",
+        "style": "solid"
+      },
+      {
+        "source": "Search UI",
+        "target": "Elastic Language Client",
+        "style": "solid"
+      },
+      {
+        "source": "Elastic Language Client",
+        "target": "Database",
+        "style": "solid"
+      },
+      {
+        "source": "Database",
+        "target": "Elastic Connector for MS SQL",
+        "style": "dashed"
+      },
+      {
+        "source": "Elastic Connector for MS SQL",
+        "target": "DB",
+        "style": "dashed"
+      },
+      {
+        "source": "Elastic Connector for MS SQL",
+        "target": "Indices",
+        "style": "dashed"
+      },
+      {
+        "source": "Indices",
+        "target": "ELSER Model",
+        "style": "dashed"
+      },
+      {
+        "source": "Elastic Language Client",
+        "target": "Elasticsearch Serverless",
+        "style": "dashed"
+      }
+    ],
+    "icons": [
+      "docker",
+      "MS SQL"
+    ]
+  }
+}
