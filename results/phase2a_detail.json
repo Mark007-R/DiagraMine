@@ -1,0 +1,936 @@
+{
+  "text": {
+    "easyocr": {
+      "per_diagram": {
+        "diagram_01.png": {
+          "detected": 4,
+          "ground_truth": 4,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 0.945,
+          "runtime_seconds": 1.855
+        },
+        "diagram_02.png": {
+          "detected": 6,
+          "ground_truth": 6,
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 1.0,
+          "runtime_seconds": 2.437
+        },
+        "diagram_03.png": {
+          "detected": 6,
+          "ground_truth": 6,
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 0.921,
+          "runtime_seconds": 2.126
+        },
+        "diagram_04.png": {
+          "detected": 4,
+          "ground_truth": 4,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 0.812,
+          "runtime_seconds": 1.852
+        },
+        "diagram_05.png": {
+          "detected": 5,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 1.0,
+          "runtime_seconds": 1.969
+        },
+        "diagram_06.png": {
+          "detected": 5,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 1.0,
+          "runtime_seconds": 1.888
+        },
+        "diagram_07.png": {
+          "detected": 4,
+          "ground_truth": 4,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 1.0,
+          "runtime_seconds": 1.651
+        },
+        "diagram_08.png": {
+          "detected": 3,
+          "ground_truth": 3,
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 0.958,
+          "runtime_seconds": 1.47
+        },
+        "diagram_09.png": {
+          "detected": 4,
+          "ground_truth": 4,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 0.911,
+          "runtime_seconds": 1.529
+        },
+        "diagram_10.png": {
+          "detected": 5,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 0.98,
+          "runtime_seconds": 1.933
+        },
+        "diagram_11.png": {
+          "detected": 5,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 1.0,
+          "runtime_seconds": 1.989
+        },
+        "diagram_12.png": {
+          "detected": 4,
+          "ground_truth": 4,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 0.931,
+          "runtime_seconds": 1.73
+        },
+        "diagram_13.png": {
+          "detected": 5,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 1.0,
+          "runtime_seconds": 1.941
+        },
+        "diagram_14.png": {
+          "detected": 5,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 1.0,
+          "runtime_seconds": 1.956
+        },
+        "search_interview_test.png": {
+          "detected": 18,
+          "ground_truth": 10,
+          "tp": 10,
+          "fp": 8,
+          "fn": 0,
+          "precision": 0.556,
+          "recall": 1.0,
+          "f1": 0.714,
+          "per_char_accuracy": 0.942,
+          "runtime_seconds": 2.175
+        }
+      },
+      "aggregate": {
+        "precision": 0.904,
+        "recall": 1.0,
+        "f1": 0.949,
+        "per_char_accuracy": 0.962,
+        "avg_runtime_seconds": 1.9
+      }
+    },
+    "tesseract": {
+      "skipped": true,
+      "reason": "tesseract.exe binary not on PATH (install from https://github.com/UB-Mannheim/tesseract/wiki)"
+    },
+    "paddleocr": {
+      "per_diagram": {
+        "diagram_01.png": {
+          "detected": 4,
+          "ground_truth": 4,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 0.972,
+          "runtime_seconds": 0.926
+        },
+        "diagram_02.png": {
+          "detected": 6,
+          "ground_truth": 6,
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 0.992,
+          "runtime_seconds": 0.865
+        },
+        "diagram_03.png": {
+          "detected": 5,
+          "ground_truth": 6,
+          "tp": 5,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.833,
+          "f1": 0.909,
+          "per_char_accuracy": 0.989,
+          "runtime_seconds": 0.796
+        },
+        "diagram_04.png": {
+          "detected": 3,
+          "ground_truth": 4,
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.857,
+          "per_char_accuracy": 0.902,
+          "runtime_seconds": 0.762
+        },
+        "diagram_05.png": {
+          "detected": 5,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 1.0,
+          "runtime_seconds": 0.322
+        },
+        "diagram_06.png": {
+          "detected": 5,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 1.0,
+          "runtime_seconds": 0.82
+        },
+        "diagram_07.png": {
+          "detected": 4,
+          "ground_truth": 4,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 1.0,
+          "runtime_seconds": 0.771
+        },
+        "diagram_08.png": {
+          "detected": 3,
+          "ground_truth": 3,
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 1.0,
+          "runtime_seconds": 0.303
+        },
+        "diagram_09.png": {
+          "detected": 4,
+          "ground_truth": 4,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 0.939,
+          "runtime_seconds": 0.765
+        },
+        "diagram_10.png": {
+          "detected": 5,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 1.0,
+          "runtime_seconds": 0.466
+        },
+        "diagram_11.png": {
+          "detected": 5,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 0.99,
+          "runtime_seconds": 0.329
+        },
+        "diagram_12.png": {
+          "detected": 4,
+          "ground_truth": 4,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 0.954,
+          "runtime_seconds": 0.796
+        },
+        "diagram_13.png": {
+          "detected": 5,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 0.95,
+          "runtime_seconds": 0.377
+        },
+        "diagram_14.png": {
+          "detected": 5,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "per_char_accuracy": 1.0,
+          "runtime_seconds": 0.305
+        },
+        "search_interview_test.png": {
+          "detected": 17,
+          "ground_truth": 10,
+          "tp": 10,
+          "fp": 7,
+          "fn": 0,
+          "precision": 0.588,
+          "recall": 1.0,
+          "f1": 0.741,
+          "per_char_accuracy": 0.968,
+          "runtime_seconds": 1.448
+        }
+      },
+      "aggregate": {
+        "precision": 0.912,
+        "recall": 0.973,
+        "f1": 0.942,
+        "per_char_accuracy": 0.979,
+        "avg_runtime_seconds": 0.67
+      }
+    }
+  },
+  "box": {
+    "canny_contours": {
+      "per_diagram": {
+        "diagram_01.png": {
+          "detected": 3,
+          "ground_truth": 4,
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.857,
+          "fp_rate": 0.0,
+          "runtime_seconds": 0.004
+        },
+        "diagram_02.png": {
+          "detected": 8,
+          "ground_truth": 6,
+          "tp": 6,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.857,
+          "fp_rate": 0.25,
+          "runtime_seconds": 0.003
+        },
+        "diagram_03.png": {
+          "detected": 8,
+          "ground_truth": 6,
+          "tp": 6,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.857,
+          "fp_rate": 0.25,
+          "runtime_seconds": 0.003
+        },
+        "diagram_04.png": {
+          "detected": 5,
+          "ground_truth": 4,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.889,
+          "fp_rate": 0.2,
+          "runtime_seconds": 0.002
+        },
+        "diagram_05.png": {
+          "detected": 6,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.833,
+          "recall": 1.0,
+          "f1": 0.909,
+          "fp_rate": 0.167,
+          "runtime_seconds": 0.002
+        },
+        "diagram_06.png": {
+          "detected": 8,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 3,
+          "fn": 0,
+          "precision": 0.625,
+          "recall": 1.0,
+          "f1": 0.769,
+          "fp_rate": 0.375,
+          "runtime_seconds": 0.002
+        },
+        "diagram_07.png": {
+          "detected": 5,
+          "ground_truth": 4,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.889,
+          "fp_rate": 0.2,
+          "runtime_seconds": 0.002
+        },
+        "diagram_08.png": {
+          "detected": 5,
+          "ground_truth": 3,
+          "tp": 3,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.6,
+          "recall": 1.0,
+          "f1": 0.75,
+          "fp_rate": 0.4,
+          "runtime_seconds": 0.002
+        },
+        "diagram_09.png": {
+          "detected": 7,
+          "ground_truth": 4,
+          "tp": 2,
+          "fp": 5,
+          "fn": 2,
+          "precision": 0.286,
+          "recall": 0.5,
+          "f1": 0.364,
+          "fp_rate": 0.714,
+          "runtime_seconds": 0.003
+        },
+        "diagram_10.png": {
+          "detected": 6,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.833,
+          "recall": 1.0,
+          "f1": 0.909,
+          "fp_rate": 0.167,
+          "runtime_seconds": 0.003
+        },
+        "diagram_11.png": {
+          "detected": 7,
+          "ground_truth": 5,
+          "tp": 4,
+          "fp": 3,
+          "fn": 1,
+          "precision": 0.571,
+          "recall": 0.8,
+          "f1": 0.667,
+          "fp_rate": 0.429,
+          "runtime_seconds": 0.003
+        },
+        "diagram_12.png": {
+          "detected": 5,
+          "ground_truth": 4,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.889,
+          "fp_rate": 0.2,
+          "runtime_seconds": 0.002
+        },
+        "diagram_13.png": {
+          "detected": 5,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "fp_rate": 0.0,
+          "runtime_seconds": 0.003
+        },
+        "diagram_14.png": {
+          "detected": 8,
+          "ground_truth": 5,
+          "tp": 5,
+          "fp": 3,
+          "fn": 0,
+          "precision": 0.625,
+          "recall": 1.0,
+          "f1": 0.769,
+          "fp_rate": 0.375,
+          "runtime_seconds": 0.002
+        }
+      },
+      "aggregate": {
+        "precision": 0.709,
+        "recall": 0.938,
+        "f1": 0.808,
+        "fp_rate": 0.291,
+        "avg_runtime_seconds": 0.003
+      }
+    },
+    "hough_rectangles": {
+      "per_diagram": {
+        "diagram_01.png": {
+          "detected": 8,
+          "ground_truth": 4,
+          "tp": 2,
+          "fp": 6,
+          "fn": 2,
+          "precision": 0.25,
+          "recall": 0.5,
+          "f1": 0.333,
+          "fp_rate": 0.75,
+          "runtime_seconds": 0.007
+        },
+        "diagram_02.png": {
+          "detected": 32,
+          "ground_truth": 6,
+          "tp": 4,
+          "fp": 28,
+          "fn": 2,
+          "precision": 0.125,
+          "recall": 0.667,
+          "f1": 0.211,
+          "fp_rate": 0.875,
+          "runtime_seconds": 0.012
+        },
+        "diagram_03.png": {
+          "detected": 13,
+          "ground_truth": 6,
+          "tp": 5,
+          "fp": 8,
+          "fn": 1,
+          "precision": 0.385,
+          "recall": 0.833,
+          "f1": 0.526,
+          "fp_rate": 0.615,
+          "runtime_seconds": 0.014
+        },
+        "diagram_04.png": {
+          "detected": 20,
+          "ground_truth": 4,
+          "tp": 4,
+          "fp": 16,
+          "fn": 0,
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.333,
+          "fp_rate": 0.8,
+          "runtime_seconds": 0.012
+        },
+        "diagram_05.png": {
+          "detected": 10,
+          "ground_truth": 5,
+          "tp": 2,
+          "fp": 8,
+          "fn": 3,
+          "precision": 0.2,
+          "recall": 0.4,
+          "f1": 0.267,
+          "fp_rate": 0.8,
+          "runtime_seconds": 0.009
+        },
+        "diagram_06.png": {
+          "detected": 17,
+          "ground_truth": 5,
+          "tp": 3,
+          "fp": 14,
+          "fn": 2,
+          "precision": 0.176,
+          "recall": 0.6,
+          "f1": 0.273,
+          "fp_rate": 0.824,
+          "runtime_seconds": 0.009
+        },
+        "diagram_07.png": {
+          "detected": 7,
+          "ground_truth": 4,
+          "tp": 4,
+          "fp": 3,
+          "fn": 0,
+          "precision": 0.571,
+          "recall": 1.0,
+          "f1": 0.727,
+          "fp_rate": 0.429,
+          "runtime_seconds": 0.007
+        },
+        "diagram_08.png": {
+          "detected": 7,
+          "ground_truth": 3,
+          "tp": 3,
+          "fp": 4,
+          "fn": 0,
+          "precision": 0.429,
+          "recall": 1.0,
+          "f1": 0.6,
+          "fp_rate": 0.571,
+          "runtime_seconds": 0.007
+        },
+        "diagram_09.png": {
+          "detected": 23,
+          "ground_truth": 4,
+          "tp": 4,
+          "fp": 19,
+          "fn": 0,
+          "precision": 0.174,
+          "recall": 1.0,
+          "f1": 0.296,
+          "fp_rate": 0.826,
+          "runtime_seconds": 0.008
+        },
+        "diagram_10.png": {
+          "detected": 17,
+          "ground_truth": 5,
+          "tp": 4,
+          "fp": 13,
+          "fn": 1,
+          "precision": 0.235,
+          "recall": 0.8,
+          "f1": 0.364,
+          "fp_rate": 0.765,
+          "runtime_seconds": 0.014
+        },
+        "diagram_11.png": {
+          "detected": 27,
+          "ground_truth": 5,
+          "tp": 3,
+          "fp": 24,
+          "fn": 2,
+          "precision": 0.111,
+          "recall": 0.6,
+          "f1": 0.188,
+          "fp_rate": 0.889,
+          "runtime_seconds": 0.012
+        },
+        "diagram_12.png": {
+          "detected": 17,
+          "ground_truth": 4,
+          "tp": 4,
+          "fp": 13,
+          "fn": 0,
+          "precision": 0.235,
+          "recall": 1.0,
+          "f1": 0.381,
+          "fp_rate": 0.765,
+          "runtime_seconds": 0.009
+        },
+        "diagram_13.png": {
+          "detected": 7,
+          "ground_truth": 5,
+          "tp": 1,
+          "fp": 6,
+          "fn": 4,
+          "precision": 0.143,
+          "recall": 0.2,
+          "f1": 0.167,
+          "fp_rate": 0.857,
+          "runtime_seconds": 0.008
+        },
+        "diagram_14.png": {
+          "detected": 5,
+          "ground_truth": 5,
+          "tp": 1,
+          "fp": 4,
+          "fn": 4,
+          "precision": 0.2,
+          "recall": 0.2,
+          "f1": 0.2,
+          "fp_rate": 0.8,
+          "runtime_seconds": 0.009
+        }
+      },
+      "aggregate": {
+        "precision": 0.21,
+        "recall": 0.677,
+        "f1": 0.32,
+        "fp_rate": 0.79,
+        "avg_runtime_seconds": 0.01
+      }
+    },
+    "yolov8_zero_shot": {
+      "per_diagram": {
+        "diagram_01.png": {
+          "detected": 0,
+          "ground_truth": 4,
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fp_rate": 0.0,
+          "runtime_seconds": 0.327
+        },
+        "diagram_02.png": {
+          "detected": 0,
+          "ground_truth": 6,
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fp_rate": 0.0,
+          "runtime_seconds": 0.101
+        },
+        "diagram_03.png": {
+          "detected": 0,
+          "ground_truth": 6,
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fp_rate": 0.0,
+          "runtime_seconds": 0.097
+        },
+        "diagram_04.png": {
+          "detected": 0,
+          "ground_truth": 4,
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fp_rate": 0.0,
+          "runtime_seconds": 0.094
+        },
+        "diagram_05.png": {
+          "detected": 0,
+          "ground_truth": 5,
+          "tp": 0,
+          "fp": 0,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fp_rate": 0.0,
+          "runtime_seconds": 0.113
+        },
+        "diagram_06.png": {
+          "detected": 1,
+          "ground_truth": 5,
+          "tp": 1,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.2,
+          "f1": 0.333,
+          "fp_rate": 0.0,
+          "runtime_seconds": 0.084
+        },
+        "diagram_07.png": {
+          "detected": 0,
+          "ground_truth": 4,
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fp_rate": 0.0,
+          "runtime_seconds": 0.119
+        },
+        "diagram_08.png": {
+          "detected": 1,
+          "ground_truth": 3,
+          "tp": 0,
+          "fp": 1,
+          "fn": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fp_rate": 1.0,
+          "runtime_seconds": 0.085
+        },
+        "diagram_09.png": {
+          "detected": 0,
+          "ground_truth": 4,
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fp_rate": 0.0,
+          "runtime_seconds": 0.102
+        },
+        "diagram_10.png": {
+          "detected": 0,
+          "ground_truth": 5,
+          "tp": 0,
+          "fp": 0,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fp_rate": 0.0,
+          "runtime_seconds": 0.104
+        },
+        "diagram_11.png": {
+          "detected": 0,
+          "ground_truth": 5,
+          "tp": 0,
+          "fp": 0,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fp_rate": 0.0,
+          "runtime_seconds": 0.096
+        },
+        "diagram_12.png": {
+          "detected": 0,
+          "ground_truth": 4,
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fp_rate": 0.0,
+          "runtime_seconds": 0.114
+        },
+        "diagram_13.png": {
+          "detected": 0,
+          "ground_truth": 5,
+          "tp": 0,
+          "fp": 0,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fp_rate": 0.0,
+          "runtime_seconds": 0.089
+        },
+        "diagram_14.png": {
+          "detected": 0,
+          "ground_truth": 5,
+          "tp": 0,
+          "fp": 0,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fp_rate": 0.0,
+          "runtime_seconds": 0.097
+        }
+      },
+      "aggregate": {
+        "precision": 0.5,
+        "recall": 0.015,
+        "f1": 0.03,
+        "fp_rate": 0.5,
+        "avg_runtime_seconds": 0.116
+      }
+    }
+  },
+  "skipped": [
+    {
+      "stage": "text",
+      "detector": "tesseract",
+      "reason": "tesseract.exe binary not on PATH (install from https://github.com/UB-Mannheim/tesseract/wiki)"
+    }
+  ]
+}

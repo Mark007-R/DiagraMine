@@ -1,0 +1,14 @@
+# easyocr on diagram_01.png
+# precision=1.0 recall=1.0 f1=1.0 per_char_acc=0.945
+
+# Detected texts:
+  ( 197, 155) 'Browser-'                               conf=0.95
+  ( 499, 153) '#eb Server'                             conf=0.78
+  ( 838, 152) 'Pp Server'                              conf=0.86
+  ( 512, 431) 'Database'                               conf=1.00
+
+# Matches (gt -> detected, fuzz_ratio):
+  'Database'                          -> 'Database'                          100.0
+  'App Server'                        -> 'Pp Server'                         94.73684210526316
+  'Browser'                           -> 'Browser-'                          93.33333333333333
+  'Web Server'                        -> '#eb Server'                        90.0

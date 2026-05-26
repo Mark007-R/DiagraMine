@@ -1,0 +1,14 @@
+# easyocr on diagram_07.png
+# precision=1.0 recall=1.0 f1=1.0 per_char_acc=1.0
+
+# Detected texts:
+  ( 441, 135) 'Load Balancer'                          conf=1.00
+  ( 159, 357) 'Web 1'                                  conf=1.00
+  ( 483, 357) 'Web 2'                                  conf=0.99
+  ( 807, 357) 'Web 3'                                  conf=0.99
+
+# Matches (gt -> detected, fuzz_ratio):
+  'Web 3'                             -> 'Web 3'                             100.0
+  'Web 2'                             -> 'Web 2'                             100.0
+  'Web 1'                             -> 'Web 1'                             100.0
+  'Load Balancer'                     -> 'Load Balancer'                     100.0

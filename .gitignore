@@ -31,6 +31,13 @@ results/runs/
 # EasyOCR model cache
 .EasyOCR/
 
+# YOLO / ultralytics model weights (auto-downloaded by ultralytics on first use)
+*.pt
+ultralytics_runs/
+
+# PaddleOCR model cache
+.paddleocr/
+
 # Logs
 *.log
 logs/
