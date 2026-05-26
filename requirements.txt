@@ -1,0 +1,23 @@
+# DiagraMine — pinned to versions verified during the May 2026 sprint.
+
+# Core CV / numerical
+numpy>=1.24
+opencv-python>=4.10
+opencv-contrib-python>=4.10
+Pillow>=10.0
+matplotlib>=3.7
+networkx>=3.0
+
+# OCR backends (Phase 2a)
+easyocr>=1.7.2
+paddleocr>=2.10.0
+pytesseract>=0.3.13
+# NOTE: pytesseract requires the tesseract.exe native binary.
+# See docs/INSTALL_TESSERACT.md for Windows / Linux / macOS instructions.
+
+# Vision foundation model (Phase 2a, YOLOv8 zero-shot baseline)
+ultralytics>=8.3
+# Auto-downloads yolov8n.pt (~6 MB) into the repo root on first use.
+
+# Evaluation
+rapidfuzz>=3.14
