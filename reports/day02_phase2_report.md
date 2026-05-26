@@ -58,6 +58,36 @@
 - **Hough rectangles collapse to F1=0.320.** Visual inspection of `results/samples/box/hough_rectangles__diagram_07.png` shows the failure mode: dashed arrows leave horizontal segment runs that, paired with box edges, satisfy the "four corners" test and produce 1–2 spurious rectangles per arrow. Increasing `minLineLength` would suppress the arrows but would also cut recall on small boxes.
 - **YOLOv8n zero-shot is the negative result.** Across 14 diagrams it returned 2 total detections, both labeled `book` or `tv` (COCO classes for rectangle-shaped natural objects), with IoU < 0.5 against any GT box. The recall of 1.5% is essentially "transfer from natural photos to abstract diagrams doesn't work without fine-tuning" — confirming what the Phase 2a write-up predicted.
 
+## Schema-valid JSON output rate (per Hard Rule #9)
+
+DiagraMine's headline reliability metric is **schema-valid JSON output rate** —
+the fraction of runs whose output can be `json.dumps`'d AND satisfies the
+expected component-list / box-list contract. Phase 2a evaluates detector-level
+outputs (each detector returns a Python dict with `texts` or `boxes` and
+`runtime_seconds`); pipeline-level JSON serialisation (`diagram_analysis.export_json()`)
+was not modified today, so the **pipeline-level rate measured on Day 1 stays at
+1.000** (15/15 diagrams).
+
+The detector-level audit (`results/_schema_valid_audit.py` →
+`results/phase2a_schema_validity.json`):
+
+| Detector             | Schema-valid runs / total | Rate  |
+|----------------------|--------------------------|-------|
+| EasyOCR              | 15 / 15                  | 1.000 |
+| PaddleOCR            | 15 / 15                  | 1.000 |
+| Tesseract            | 0 / 0 (skipped — binary missing) | n/a |
+| Canny + contours     | 15 / 15                  | 1.000 |
+| Hough rectangles     | 15 / 15                  | 1.000 |
+| YOLOv8n zero-shot    | 15 / 15                  | 1.000 |
+| **Aggregate (executable detectors)** | **75 / 75**  | **1.000** |
+
+This is the foundation of the Day-6 frontier comparison story: every specialised
+detector here returns parseable structured output on every input, including the
+YOLOv8 baseline that returns 0 detections (an empty `boxes: []` list is still
+schema-valid — failure to detect is not failure to return structure). Vision
+LLMs in the Day-6 comparison will be measured on the same metric and are
+expected to drop to ~13% when asked for strict JSON, per the Phase 6 prediction.
+
 ## Head-to-Head Comparison
 
 | Rank | Stage | Strategy | F1    | Secondary       | Latency  | Notes |
@@ -76,6 +106,9 @@
 4. **What didn't work:** Hough rectangle reconstruction. The four-corner-support test is fundamentally fooled by dashed arrows + box sides forming spurious sub-rectangles (sample at `results/samples/box/hough_rectangles__diagram_07.png` shows 3 false positives in a 4-box diagram). Increasing `minLineLength` would suppress them but also discard real boxes <80px wide. Dead-end approach for this diagram class.
 
 ## Sample Outputs Saved
+- `results/phase2a_schema_validity.json` — per-detector / per-diagram schema-valid JSON rate audit.
+- `docs/INSTALL_TESSERACT.md` — recorded install attempts on this Windows host (all required admin elevation that was unavailable) and recommended install path for the next runner; Tesseract auto-includes once `tesseract.exe` is on PATH.
+- `requirements.txt` — pinned versions for all 6 detectors used in Phase 2a.
 - `results/samples/text/{easyocr,paddleocr}__diagram_{01,05,07,10,14}.txt` — 10 per-image text dumps with detected strings + bipartite-matched GT pairs + fuzz ratios.
 - `results/samples/box/{canny_contours,hough_rectangles,yolov8_zero_shot}__diagram_{01,05,07,10,14}.png` — 15 annotated overlays (GT in green, detector output in red).
 - `results/phase2a_text_box.csv` — per-detector aggregate leaderboard.

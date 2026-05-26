@@ -1,0 +1,427 @@
+{
+  "text": {
+    "easyocr": {
+      "per_diagram_count": 15,
+      "valid_count": 15,
+      "rate": 1.0,
+      "per_diagram": [
+        {
+          "diagram": "diagram_01.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_02.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_03.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_04.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_05.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_06.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_07.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_08.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_09.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_10.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_11.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_12.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_13.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_14.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "search_interview_test.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        }
+      ]
+    },
+    "tesseract": {
+      "skipped": true,
+      "reason": "tesseract.exe binary not on PATH (install from https://github.com/UB-Mannheim/tesseract/wiki)"
+    },
+    "paddleocr": {
+      "per_diagram_count": 15,
+      "valid_count": 15,
+      "rate": 1.0,
+      "per_diagram": [
+        {
+          "diagram": "diagram_01.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_02.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_03.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_04.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_05.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_06.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_07.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_08.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_09.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_10.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_11.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_12.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_13.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_14.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "search_interview_test.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        }
+      ]
+    }
+  },
+  "box": {
+    "canny_contours": {
+      "per_diagram_count": 15,
+      "valid_count": 15,
+      "rate": 1.0,
+      "per_diagram": [
+        {
+          "diagram": "diagram_01.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_02.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_03.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_04.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_05.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_06.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_07.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_08.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_09.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_10.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_11.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_12.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_13.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_14.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "search_interview_test.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        }
+      ]
+    },
+    "hough_rectangles": {
+      "per_diagram_count": 15,
+      "valid_count": 15,
+      "rate": 1.0,
+      "per_diagram": [
+        {
+          "diagram": "diagram_01.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_02.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_03.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_04.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_05.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_06.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_07.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_08.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_09.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_10.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_11.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_12.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_13.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_14.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "search_interview_test.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        }
+      ]
+    },
+    "yolov8_zero_shot": {
+      "per_diagram_count": 15,
+      "valid_count": 15,
+      "rate": 1.0,
+      "per_diagram": [
+        {
+          "diagram": "diagram_01.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_02.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_03.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_04.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_05.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_06.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_07.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_08.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_09.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_10.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_11.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_12.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_13.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "diagram_14.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        },
+        {
+          "diagram": "search_interview_test.png",
+          "schema_valid": true,
+          "schema_reason": "ok"
+        }
+      ]
+    }
+  },
+  "aggregate": {
+    "total_runs_evaluated": 75,
+    "valid_runs": 75,
+    "skipped_runs": 15,
+    "schema_valid_json_rate": 1.0,
+    "note": "Phase 2a evaluates detector-level outputs only; the pipeline-level JSON rate from Day 1 baseline (100% on extracted_structure.json) is unchanged because diagram_analysis.export_json() was not modified."
+  }
+}
