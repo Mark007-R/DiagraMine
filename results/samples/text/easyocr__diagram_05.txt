@@ -1,0 +1,16 @@
+# easyocr on diagram_05.png
+# precision=1.0 recall=1.0 f1=1.0 per_char_acc=1.0
+
+# Detected texts:
+  ( 540, 116) 'Ingress'                                conf=1.00
+  ( 540, 290) 'Service'                                conf=1.00
+  ( 188, 484) 'Pod A'                                  conf=0.99
+  ( 551, 487) 'Pod B'                                  conf=0.97
+  ( 910, 484) 'Pod C'                                  conf=0.79
+
+# Matches (gt -> detected, fuzz_ratio):
+  'Pod C'                             -> 'Pod C'                             100.0
+  'Pod B'                             -> 'Pod B'                             100.0
+  'Pod A'                             -> 'Pod A'                             100.0
+  'Service'                           -> 'Service'                           100.0
+  'Ingress'                           -> 'Ingress'                           100.0

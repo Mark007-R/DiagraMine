@@ -1,0 +1,16 @@
+# paddleocr on diagram_14.png
+# precision=1.0 recall=1.0 f1=1.0 per_char_acc=1.0
+
+# Detected texts:
+  ( 129, 165) 'HTTP Adapter'                           conf=1.00
+  ( 898, 162) 'DB Adapter'                             conf=0.98
+  ( 514, 319) 'Domain Core'                            conf=1.00
+  ( 141, 475) 'CLI Adapter'                            conf=0.99
+  ( 897, 477) 'MQ Adapter'                             conf=1.00
+
+# Matches (gt -> detected, fuzz_ratio):
+  'MQ Adapter'                        -> 'MQ Adapter'                        100.0
+  'DB Adapter'                        -> 'DB Adapter'                        100.0
+  'Domain Core'                       -> 'Domain Core'                       100.0
+  'CLI Adapter'                       -> 'CLI Adapter'                       100.0
+  'HTTP Adapter'                      -> 'HTTP Adapter'                      100.0

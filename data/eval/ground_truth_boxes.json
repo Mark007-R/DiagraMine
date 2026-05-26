@@ -1,0 +1,625 @@
+{
+  "diagram_01.png": {
+    "image_size": [
+      996,
+      719
+    ],
+    "on_disk_size": [
+      996,
+      718
+    ],
+    "boxes": [
+      {
+        "label": "Browser",
+        "x": 128,
+        "y": 110,
+        "w": 222,
+        "h": 111
+      },
+      {
+        "label": "Web Server",
+        "x": 452,
+        "y": 110,
+        "w": 222,
+        "h": 111
+      },
+      {
+        "label": "App Server",
+        "x": 775,
+        "y": 110,
+        "w": 222,
+        "h": 111
+      },
+      {
+        "label": "Database",
+        "x": 452,
+        "y": 387,
+        "w": 222,
+        "h": 111
+      }
+    ]
+  },
+  "diagram_02.png": {
+    "image_size": [
+      1181,
+      811
+    ],
+    "on_disk_size": [
+      1180,
+      811
+    ],
+    "boxes": [
+      {
+        "label": "Client App",
+        "x": 470,
+        "y": 82,
+        "w": 222,
+        "h": 92
+      },
+      {
+        "label": "API Gateway",
+        "x": 470,
+        "y": 248,
+        "w": 222,
+        "h": 93
+      },
+      {
+        "label": "User Svc",
+        "x": 110,
+        "y": 452,
+        "w": 222,
+        "h": 92
+      },
+      {
+        "label": "Order Svc",
+        "x": 470,
+        "y": 452,
+        "w": 222,
+        "h": 92
+      },
+      {
+        "label": "Payment Svc",
+        "x": 831,
+        "y": 452,
+        "w": 221,
+        "h": 92
+      },
+      {
+        "label": "Orders DB",
+        "x": 470,
+        "y": 646,
+        "w": 222,
+        "h": 92
+      }
+    ]
+  },
+  "diagram_03.png": {
+    "image_size": [
+      1181,
+      719
+    ],
+    "on_disk_size": [
+      1180,
+      718
+    ],
+    "boxes": [
+      {
+        "label": "Producer A",
+        "x": 110,
+        "y": 156,
+        "w": 222,
+        "h": 93
+      },
+      {
+        "label": "Producer B",
+        "x": 110,
+        "y": 360,
+        "w": 222,
+        "h": 92
+      },
+      {
+        "label": "Message Broker",
+        "x": 480,
+        "y": 258,
+        "w": 221,
+        "h": 92
+      },
+      {
+        "label": "Consumer A",
+        "x": 849,
+        "y": 101,
+        "w": 222,
+        "h": 92
+      },
+      {
+        "label": "Consumer B",
+        "x": 849,
+        "y": 258,
+        "w": 222,
+        "h": 92
+      },
+      {
+        "label": "Consumer C",
+        "x": 849,
+        "y": 415,
+        "w": 222,
+        "h": 92
+      }
+    ]
+  },
+  "diagram_04.png": {
+    "image_size": [
+      1273,
+      626
+    ],
+    "on_disk_size": [
+      1273,
+      626
+    ],
+    "boxes": [
+      {
+        "label": "S3 Source",
+        "x": 91,
+        "y": 257,
+        "w": 222,
+        "h": 111
+      },
+      {
+        "label": "Lambda Func",
+        "x": 387,
+        "y": 257,
+        "w": 222,
+        "h": 111
+      },
+      {
+        "label": "Glue Job",
+        "x": 683,
+        "y": 257,
+        "w": 222,
+        "h": 111
+      },
+      {
+        "label": "Redshift",
+        "x": 978,
+        "y": 257,
+        "w": 222,
+        "h": 111
+      }
+    ]
+  },
+  "diagram_05.png": {
+    "image_size": [
+      1181,
+      719
+    ],
+    "on_disk_size": [
+      1180,
+      718
+    ],
+    "boxes": [
+      {
+        "label": "Ingress",
+        "x": 470,
+        "y": 82,
+        "w": 222,
+        "h": 93
+      },
+      {
+        "label": "Service",
+        "x": 470,
+        "y": 258,
+        "w": 222,
+        "h": 92
+      },
+      {
+        "label": "Pod A",
+        "x": 110,
+        "y": 452,
+        "w": 222,
+        "h": 92
+      },
+      {
+        "label": "Pod B",
+        "x": 470,
+        "y": 452,
+        "w": 222,
+        "h": 92
+      },
+      {
+        "label": "Pod C",
+        "x": 831,
+        "y": 452,
+        "w": 221,
+        "h": 92
+      }
+    ]
+  },
+  "diagram_06.png": {
+    "image_size": [
+      1088,
+      719
+    ],
+    "on_disk_size": [
+      1088,
+      718
+    ],
+    "boxes": [
+      {
+        "label": "App",
+        "x": 406,
+        "y": 101,
+        "w": 221,
+        "h": 92
+      },
+      {
+        "label": "Master DB",
+        "x": 406,
+        "y": 295,
+        "w": 221,
+        "h": 111
+      },
+      {
+        "label": "Replica 1",
+        "x": 82,
+        "y": 507,
+        "w": 222,
+        "h": 111
+      },
+      {
+        "label": "Replica 2",
+        "x": 406,
+        "y": 507,
+        "w": 221,
+        "h": 111
+      },
+      {
+        "label": "Replica 3",
+        "x": 729,
+        "y": 507,
+        "w": 222,
+        "h": 111
+      }
+    ]
+  },
+  "diagram_07.png": {
+    "image_size": [
+      1088,
+      626
+    ],
+    "on_disk_size": [
+      1088,
+      626
+    ],
+    "boxes": [
+      {
+        "label": "Load Balancer",
+        "x": 406,
+        "y": 100,
+        "w": 221,
+        "h": 93
+      },
+      {
+        "label": "Web 1",
+        "x": 82,
+        "y": 313,
+        "w": 222,
+        "h": 111
+      },
+      {
+        "label": "Web 2",
+        "x": 406,
+        "y": 313,
+        "w": 221,
+        "h": 111
+      },
+      {
+        "label": "Web 3",
+        "x": 729,
+        "y": 313,
+        "w": 222,
+        "h": 111
+      }
+    ]
+  },
+  "diagram_08.png": {
+    "image_size": [
+      1088,
+      626
+    ],
+    "on_disk_size": [
+      1088,
+      626
+    ],
+    "boxes": [
+      {
+        "label": "App",
+        "x": 406,
+        "y": 100,
+        "w": 221,
+        "h": 93
+      },
+      {
+        "label": "Cache",
+        "x": 82,
+        "y": 313,
+        "w": 222,
+        "h": 111
+      },
+      {
+        "label": "Database",
+        "x": 729,
+        "y": 313,
+        "w": 222,
+        "h": 111
+      }
+    ]
+  },
+  "diagram_09.png": {
+    "image_size": [
+      1273,
+      534
+    ],
+    "on_disk_size": [
+      1273,
+      534
+    ],
+    "boxes": [
+      {
+        "label": "Source DB",
+        "x": 82,
+        "y": 202,
+        "w": 222,
+        "h": 111
+      },
+      {
+        "label": "Extract",
+        "x": 378,
+        "y": 202,
+        "w": 222,
+        "h": 111
+      },
+      {
+        "label": "Transform",
+        "x": 674,
+        "y": 202,
+        "w": 221,
+        "h": 111
+      },
+      {
+        "label": "Warehouse",
+        "x": 969,
+        "y": 202,
+        "w": 222,
+        "h": 111
+      }
+    ]
+  },
+  "diagram_10.png": {
+    "image_size": [
+      1181,
+      719
+    ],
+    "on_disk_size": [
+      1180,
+      718
+    ],
+    "boxes": [
+      {
+        "label": "Command API",
+        "x": 470,
+        "y": 82,
+        "w": 222,
+        "h": 93
+      },
+      {
+        "label": "Write DB",
+        "x": 101,
+        "y": 276,
+        "w": 221,
+        "h": 93
+      },
+      {
+        "label": "Event Bus",
+        "x": 470,
+        "y": 276,
+        "w": 222,
+        "h": 93
+      },
+      {
+        "label": "Read DB",
+        "x": 840,
+        "y": 276,
+        "w": 222,
+        "h": 93
+      },
+      {
+        "label": "Query API",
+        "x": 470,
+        "y": 480,
+        "w": 222,
+        "h": 92
+      }
+    ]
+  },
+  "diagram_11.png": {
+    "image_size": [
+      1181,
+      719
+    ],
+    "on_disk_size": [
+      1180,
+      718
+    ],
+    "boxes": [
+      {
+        "label": "Orchestrator",
+        "x": 470,
+        "y": 82,
+        "w": 222,
+        "h": 93
+      },
+      {
+        "label": "Order Step",
+        "x": 101,
+        "y": 313,
+        "w": 221,
+        "h": 93
+      },
+      {
+        "label": "Payment Step",
+        "x": 470,
+        "y": 313,
+        "w": 222,
+        "h": 93
+      },
+      {
+        "label": "Shipping Step",
+        "x": 840,
+        "y": 313,
+        "w": 222,
+        "h": 93
+      },
+      {
+        "label": "Saga Log",
+        "x": 470,
+        "y": 526,
+        "w": 222,
+        "h": 92
+      }
+    ]
+  },
+  "diagram_12.png": {
+    "image_size": [
+      1181,
+      626
+    ],
+    "on_disk_size": [
+      1180,
+      626
+    ],
+    "boxes": [
+      {
+        "label": "Caller",
+        "x": 101,
+        "y": 248,
+        "w": 221,
+        "h": 111
+      },
+      {
+        "label": "Circuit Breaker",
+        "x": 433,
+        "y": 248,
+        "w": 222,
+        "h": 111
+      },
+      {
+        "label": "Remote Svc",
+        "x": 775,
+        "y": 248,
+        "w": 222,
+        "h": 111
+      },
+      {
+        "label": "Fallback",
+        "x": 433,
+        "y": 461,
+        "w": 222,
+        "h": 92
+      }
+    ]
+  },
+  "diagram_13.png": {
+    "image_size": [
+      1181,
+      719
+    ],
+    "on_disk_size": [
+      1180,
+      718
+    ],
+    "boxes": [
+      {
+        "label": "Web Client",
+        "x": 101,
+        "y": 101,
+        "w": 221,
+        "h": 92
+      },
+      {
+        "label": "Mobile Client",
+        "x": 831,
+        "y": 101,
+        "w": 221,
+        "h": 92
+      },
+      {
+        "label": "Web BFF",
+        "x": 101,
+        "y": 295,
+        "w": 221,
+        "h": 92
+      },
+      {
+        "label": "Mobile BFF",
+        "x": 831,
+        "y": 295,
+        "w": 221,
+        "h": 92
+      },
+      {
+        "label": "Core Svc",
+        "x": 470,
+        "y": 480,
+        "w": 222,
+        "h": 92
+      }
+    ]
+  },
+  "diagram_14.png": {
+    "image_size": [
+      1181,
+      719
+    ],
+    "on_disk_size": [
+      1180,
+      718
+    ],
+    "boxes": [
+      {
+        "label": "HTTP Adapter",
+        "x": 91,
+        "y": 129,
+        "w": 222,
+        "h": 92
+      },
+      {
+        "label": "CLI Adapter",
+        "x": 91,
+        "y": 443,
+        "w": 222,
+        "h": 92
+      },
+      {
+        "label": "Domain Core",
+        "x": 470,
+        "y": 286,
+        "w": 222,
+        "h": 92
+      },
+      {
+        "label": "DB Adapter",
+        "x": 849,
+        "y": 129,
+        "w": 222,
+        "h": 92
+      },
+      {
+        "label": "MQ Adapter",
+        "x": 849,
+        "y": 443,
+        "w": 222,
+        "h": 92
+      }
+    ]
+  }
+}

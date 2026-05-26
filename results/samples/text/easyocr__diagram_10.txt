@@ -1,0 +1,16 @@
+# easyocr on diagram_10.png
+# precision=1.0 recall=1.0 f1=1.0 per_char_acc=0.98
+
+# Detected texts:
+  ( 506, 114) 'Command API'                            conf=1.00
+  ( 164, 308) 'Write DB'                               conf=0.89
+  ( 528, 308) 'Event Bus -'                            conf=0.55
+  ( 902, 308) 'Read DB'                                conf=0.96
+  ( 527, 513) 'Query API'                              conf=0.98
+
+# Matches (gt -> detected, fuzz_ratio):
+  'Query API'                         -> 'Query API'                         100.0
+  'Read DB'                           -> 'Read DB'                           100.0
+  'Write DB'                          -> 'Write DB'                          100.0
+  'Command API'                       -> 'Command API'                       100.0
+  'Event Bus'                         -> 'Event Bus -'                       90.0

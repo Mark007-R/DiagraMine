@@ -1,0 +1,67 @@
+"""PaddleOCR text detector. Uses the English model; CPU-only.
+
+paddleocr 2.x API: PaddleOCR(use_angle_cls=True, lang='en'). The .ocr()
+return format is [[(bbox, (text, conf)), ...]] for the single-image case.
+"""
+from __future__ import annotations
+
+import logging
+import time
+from typing import List
+
+import cv2
+import numpy as np
+
+# Silence paddle's verbose logger
+logging.getLogger("ppocr").setLevel(logging.ERROR)
+
+_OCR = None
+
+
+def _get_ocr():
+    global _OCR
+    if _OCR is None:
+        from paddleocr import PaddleOCR
+        _OCR = PaddleOCR(use_angle_cls=True, lang="en", show_log=False)
+    return _OCR
+
+
+def detect(image_path: str, min_conf: float = 0.10) -> dict:
+    img = cv2.imread(image_path)
+    if img is None:
+        raise FileNotFoundError(image_path)
+
+    ocr = _get_ocr()
+    start = time.perf_counter()
+    # PaddleOCR accepts ndarray or path.
+    result = ocr.ocr(img, cls=True)
+    elapsed = time.perf_counter() - start
+
+    texts: List[dict] = []
+    if not result:
+        return {"texts": texts, "runtime_seconds": round(elapsed, 3)}
+
+    page = result[0] if isinstance(result[0], list) else result
+    if page is None:
+        return {"texts": texts, "runtime_seconds": round(elapsed, 3)}
+
+    for entry in page:
+        if entry is None:
+            continue
+        # entry = [bbox, (text, conf)]
+        bbox, (text, conf) = entry
+        if conf is None or conf < min_conf:
+            continue
+        pts = np.array(bbox, dtype=np.int32)
+        x, y, w, h = cv2.boundingRect(pts)
+        texts.append(
+            {
+                "text": text.strip(),
+                "x": int(x),
+                "y": int(y),
+                "w": int(w),
+                "h": int(h),
+                "conf": float(conf),
+            }
+        )
+    return {"texts": texts, "runtime_seconds": round(elapsed, 3)}

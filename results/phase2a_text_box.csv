@@ -1,0 +1,7 @@
+stage,detector,precision,recall,f1,per_char_accuracy,fp_rate,avg_runtime_seconds,notes
+text,easyocr,0.904,1.0,0.949,0.962,,1.9,fuzz>=60 over 15 diagrams
+text,tesseract,,,,,,,SKIPPED: tesseract.exe binary not on PATH (install from https://github.com/UB-Mannheim/tesseract/wiki)
+text,paddleocr,0.912,0.973,0.942,0.979,,0.67,fuzz>=60 over 15 diagrams
+box,canny_contours,0.709,0.938,0.808,,0.291,0.003,IoU>=0.5 over 14 generated diagrams
+box,hough_rectangles,0.21,0.677,0.32,,0.79,0.01,IoU>=0.5 over 14 generated diagrams
+box,yolov8_zero_shot,0.5,0.015,0.03,,0.5,0.116,IoU>=0.5 over 14 generated diagrams
