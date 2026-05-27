@@ -1,0 +1,41 @@
+{
+  "arrow": {
+    "pixel_scan": {
+      "runs": 15,
+      "valid": 15,
+      "rate": 1.0
+    },
+    "hough_lines": {
+      "runs": 15,
+      "valid": 15,
+      "rate": 1.0
+    },
+    "cnn_verified": {
+      "runs": 15,
+      "valid": 15,
+      "rate": 1.0
+    }
+  },
+  "icon": {
+    "hsv": {
+      "runs": 15,
+      "valid": 15,
+      "rate": 1.0
+    },
+    "template_matching": {
+      "runs": 15,
+      "valid": 15,
+      "rate": 1.0
+    },
+    "clip_zero_shot": {
+      "runs": 15,
+      "valid": 15,
+      "rate": 1.0
+    }
+  },
+  "aggregate": {
+    "runs": 90,
+    "valid": 90,
+    "rate": 1.0
+  }
+}

@@ -1,0 +1,1560 @@
+{
+  "arrow": {
+    "pixel_scan": {
+      "per_diagram": {
+        "diagram_01.png": {
+          "detected_pairs": 4,
+          "gt_pairs": 3,
+          "tp": 2,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.5,
+          "recall": 0.667,
+          "f1": 0.571,
+          "runtime_seconds": 0.137
+        },
+        "diagram_02.png": {
+          "detected_pairs": 1,
+          "gt_pairs": 5,
+          "tp": 1,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.2,
+          "f1": 0.333,
+          "runtime_seconds": 0.183
+        },
+        "diagram_03.png": {
+          "detected_pairs": 1,
+          "gt_pairs": 5,
+          "tp": 1,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.2,
+          "f1": 0.333,
+          "runtime_seconds": 0.165
+        },
+        "diagram_04.png": {
+          "detected_pairs": 4,
+          "gt_pairs": 3,
+          "tp": 2,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.5,
+          "recall": 0.667,
+          "f1": 0.571,
+          "runtime_seconds": 0.166
+        },
+        "diagram_05.png": {
+          "detected_pairs": 1,
+          "gt_pairs": 4,
+          "tp": 1,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4,
+          "runtime_seconds": 0.172
+        },
+        "diagram_06.png": {
+          "detected_pairs": 0,
+          "gt_pairs": 4,
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "runtime_seconds": 0.151
+        },
+        "diagram_07.png": {
+          "detected_pairs": 0,
+          "gt_pairs": 3,
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "runtime_seconds": 0.134
+        },
+        "diagram_08.png": {
+          "detected_pairs": 2,
+          "gt_pairs": 3,
+          "tp": 1,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.5,
+          "recall": 0.333,
+          "f1": 0.4,
+          "runtime_seconds": 0.14
+        },
+        "diagram_09.png": {
+          "detected_pairs": 4,
+          "gt_pairs": 3,
+          "tp": 2,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.5,
+          "recall": 0.667,
+          "f1": 0.571,
+          "runtime_seconds": 0.132
+        },
+        "diagram_10.png": {
+          "detected_pairs": 3,
+          "gt_pairs": 4,
+          "tp": 1,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.333,
+          "recall": 0.25,
+          "f1": 0.286,
+          "runtime_seconds": 0.168
+        },
+        "diagram_11.png": {
+          "detected_pairs": 0,
+          "gt_pairs": 4,
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "runtime_seconds": 0.188
+        },
+        "diagram_12.png": {
+          "detected_pairs": 2,
+          "gt_pairs": 3,
+          "tp": 1,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.5,
+          "recall": 0.333,
+          "f1": 0.4,
+          "runtime_seconds": 0.146
+        },
+        "diagram_13.png": {
+          "detected_pairs": 0,
+          "gt_pairs": 4,
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "runtime_seconds": 0.164
+        },
+        "diagram_14.png": {
+          "detected_pairs": 0,
+          "gt_pairs": 4,
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "runtime_seconds": 0.167
+        },
+        "search_interview_test.png": {
+          "skipped": "no GT boxes",
+          "runtime_seconds": 0.098,
+          "detected": 59
+        }
+      },
+      "aggregate": {
+        "precision": 0.545,
+        "recall": 0.231,
+        "f1": 0.324,
+        "avg_runtime_seconds": 0.154,
+        "scored_diagrams": 14
+      }
+    },
+    "hough_lines": {
+      "per_diagram": {
+        "diagram_01.png": {
+          "detected_pairs": 2,
+          "gt_pairs": 3,
+          "tp": 0,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "runtime_seconds": 0.021
+        },
+        "diagram_02.png": {
+          "detected_pairs": 5,
+          "gt_pairs": 5,
+          "tp": 3,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.6,
+          "recall": 0.6,
+          "f1": 0.6,
+          "runtime_seconds": 0.027
+        },
+        "diagram_03.png": {
+          "detected_pairs": 4,
+          "gt_pairs": 5,
+          "tp": 1,
+          "fp": 3,
+          "fn": 4,
+          "precision": 0.25,
+          "recall": 0.2,
+          "f1": 0.222,
+          "runtime_seconds": 0.025
+        },
+        "diagram_04.png": {
+          "detected_pairs": 3,
+          "gt_pairs": 3,
+          "tp": 0,
+          "fp": 3,
+          "fn": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "runtime_seconds": 0.02
+        },
+        "diagram_05.png": {
+          "detected_pairs": 2,
+          "gt_pairs": 4,
+          "tp": 2,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.667,
+          "runtime_seconds": 0.016
+        },
+        "diagram_06.png": {
+          "detected_pairs": 4,
+          "gt_pairs": 4,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "runtime_seconds": 0.018
+        },
+        "diagram_07.png": {
+          "detected_pairs": 1,
+          "gt_pairs": 3,
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.333,
+          "f1": 0.5,
+          "runtime_seconds": 0.014
+        },
+        "diagram_08.png": {
+          "detected_pairs": 1,
+          "gt_pairs": 3,
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.333,
+          "f1": 0.5,
+          "runtime_seconds": 0.015
+        },
+        "diagram_09.png": {
+          "detected_pairs": 2,
+          "gt_pairs": 3,
+          "tp": 0,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "runtime_seconds": 0.013
+        },
+        "diagram_10.png": {
+          "detected_pairs": 3,
+          "gt_pairs": 4,
+          "tp": 2,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.667,
+          "recall": 0.5,
+          "f1": 0.571,
+          "runtime_seconds": 0.018
+        },
+        "diagram_11.png": {
+          "detected_pairs": 6,
+          "gt_pairs": 4,
+          "tp": 1,
+          "fp": 5,
+          "fn": 3,
+          "precision": 0.167,
+          "recall": 0.25,
+          "f1": 0.2,
+          "runtime_seconds": 0.02
+        },
+        "diagram_12.png": {
+          "detected_pairs": 3,
+          "gt_pairs": 3,
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "runtime_seconds": 0.019
+        },
+        "diagram_13.png": {
+          "detected_pairs": 6,
+          "gt_pairs": 4,
+          "tp": 2,
+          "fp": 4,
+          "fn": 2,
+          "precision": 0.333,
+          "recall": 0.5,
+          "f1": 0.4,
+          "runtime_seconds": 0.019
+        },
+        "diagram_14.png": {
+          "detected_pairs": 5,
+          "gt_pairs": 4,
+          "tp": 0,
+          "fp": 5,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "runtime_seconds": 0.02
+        },
+        "search_interview_test.png": {
+          "skipped": "no GT boxes",
+          "runtime_seconds": 0.024,
+          "detected": 73
+        }
+      },
+      "aggregate": {
+        "precision": 0.383,
+        "recall": 0.346,
+        "f1": 0.364,
+        "avg_runtime_seconds": 0.019,
+        "scored_diagrams": 14
+      }
+    },
+    "cnn_verified": {
+      "per_diagram": {
+        "diagram_01.png": {
+          "detected_pairs": 2,
+          "gt_pairs": 3,
+          "tp": 0,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "runtime_seconds": 0.069
+        },
+        "diagram_02.png": {
+          "detected_pairs": 3,
+          "gt_pairs": 5,
+          "tp": 3,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.75,
+          "runtime_seconds": 0.096
+        },
+        "diagram_03.png": {
+          "detected_pairs": 3,
+          "gt_pairs": 5,
+          "tp": 1,
+          "fp": 2,
+          "fn": 4,
+          "precision": 0.333,
+          "recall": 0.2,
+          "f1": 0.25,
+          "runtime_seconds": 0.108
+        },
+        "diagram_04.png": {
+          "detected_pairs": 3,
+          "gt_pairs": 3,
+          "tp": 0,
+          "fp": 3,
+          "fn": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "runtime_seconds": 0.044
+        },
+        "diagram_05.png": {
+          "detected_pairs": 2,
+          "gt_pairs": 4,
+          "tp": 2,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.667,
+          "runtime_seconds": 0.067
+        },
+        "diagram_06.png": {
+          "detected_pairs": 2,
+          "gt_pairs": 4,
+          "tp": 2,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.667,
+          "runtime_seconds": 0.067
+        },
+        "diagram_07.png": {
+          "detected_pairs": 1,
+          "gt_pairs": 3,
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.333,
+          "f1": 0.5,
+          "runtime_seconds": 0.04
+        },
+        "diagram_08.png": {
+          "detected_pairs": 1,
+          "gt_pairs": 3,
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.333,
+          "f1": 0.5,
+          "runtime_seconds": 0.04
+        },
+        "diagram_09.png": {
+          "detected_pairs": 2,
+          "gt_pairs": 3,
+          "tp": 0,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "runtime_seconds": 0.038
+        },
+        "diagram_10.png": {
+          "detected_pairs": 3,
+          "gt_pairs": 4,
+          "tp": 2,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.667,
+          "recall": 0.5,
+          "f1": 0.571,
+          "runtime_seconds": 0.076
+        },
+        "diagram_11.png": {
+          "detected_pairs": 3,
+          "gt_pairs": 4,
+          "tp": 1,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.333,
+          "recall": 0.25,
+          "f1": 0.286,
+          "runtime_seconds": 0.13
+        },
+        "diagram_12.png": {
+          "detected_pairs": 3,
+          "gt_pairs": 3,
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "runtime_seconds": 0.063
+        },
+        "diagram_13.png": {
+          "detected_pairs": 2,
+          "gt_pairs": 4,
+          "tp": 2,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.667,
+          "runtime_seconds": 0.076
+        },
+        "diagram_14.png": {
+          "detected_pairs": 1,
+          "gt_pairs": 4,
+          "tp": 0,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "runtime_seconds": 0.066
+        },
+        "search_interview_test.png": {
+          "skipped": "no GT boxes",
+          "runtime_seconds": 0.223,
+          "detected": 59
+        }
+      },
+      "aggregate": {
+        "precision": 0.581,
+        "recall": 0.346,
+        "f1": 0.434,
+        "avg_runtime_seconds": 0.08,
+        "scored_diagrams": 14
+      }
+    }
+  },
+  "icon": {
+    "hsv": {
+      "per_diagram": {
+        "diagram_01.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.002
+        },
+        "diagram_02.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.004
+        },
+        "diagram_03.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.003
+        },
+        "diagram_04.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.003
+        },
+        "diagram_05.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.004
+        },
+        "diagram_06.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.003
+        },
+        "diagram_07.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.003
+        },
+        "diagram_08.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.002
+        },
+        "diagram_09.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.002
+        },
+        "diagram_10.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.003
+        },
+        "diagram_11.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.003
+        },
+        "diagram_12.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.003
+        },
+        "diagram_13.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.003
+        },
+        "diagram_14.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.003
+        },
+        "search_interview_test.png": {
+          "detected": 19,
+          "detected_unique_labels": 1,
+          "gt": 2,
+          "by_label": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 2,
+            "fp": 17,
+            "fn": 0,
+            "precision": 0.105,
+            "recall": 1.0,
+            "f1": 0.19
+          },
+          "runtime_seconds": 0.003
+        }
+      },
+      "aggregate": {
+        "by_label": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "presence": {
+          "precision": 0.105,
+          "recall": 1.0,
+          "f1": 0.19
+        },
+        "no_gt_fp_count": 0,
+        "avg_runtime_seconds": 0.003
+      }
+    },
+    "template_matching": {
+      "per_diagram": {
+        "diagram_01.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.204
+        },
+        "diagram_02.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.207
+        },
+        "diagram_03.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.185
+        },
+        "diagram_04.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.165
+        },
+        "diagram_05.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.184
+        },
+        "diagram_06.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.179
+        },
+        "diagram_07.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.153
+        },
+        "diagram_08.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.149
+        },
+        "diagram_09.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.147
+        },
+        "diagram_10.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.187
+        },
+        "diagram_11.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.234
+        },
+        "diagram_12.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.164
+        },
+        "diagram_13.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.19
+        },
+        "diagram_14.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.191
+        },
+        "search_interview_test.png": {
+          "detected": 2,
+          "detected_unique_labels": 2,
+          "gt": 2,
+          "by_label": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "presence": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "runtime_seconds": 0.11
+        }
+      },
+      "aggregate": {
+        "by_label": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "presence": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "no_gt_fp_count": 0,
+        "avg_runtime_seconds": 0.177
+      }
+    },
+    "clip_zero_shot": {
+      "per_diagram": {
+        "diagram_01.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 9.963
+        },
+        "diagram_02.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.011
+        },
+        "diagram_03.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.011
+        },
+        "diagram_04.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.008
+        },
+        "diagram_05.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.009
+        },
+        "diagram_06.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.01
+        },
+        "diagram_07.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.007
+        },
+        "diagram_08.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.009
+        },
+        "diagram_09.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.01
+        },
+        "diagram_10.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.011
+        },
+        "diagram_11.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.01
+        },
+        "diagram_12.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.008
+        },
+        "diagram_13.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.009
+        },
+        "diagram_14.png": {
+          "detected": 0,
+          "detected_unique_labels": 0,
+          "gt": 0,
+          "by_label": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "presence": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "runtime_seconds": 0.009
+        },
+        "search_interview_test.png": {
+          "detected": 18,
+          "detected_unique_labels": 4,
+          "gt": 2,
+          "by_label": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.667
+          },
+          "presence": {
+            "tp": 2,
+            "fp": 16,
+            "fn": 0,
+            "precision": 0.111,
+            "recall": 1.0,
+            "f1": 0.2
+          },
+          "runtime_seconds": 0.612
+        }
+      },
+      "aggregate": {
+        "by_label": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.667
+        },
+        "presence": {
+          "precision": 0.111,
+          "recall": 1.0,
+          "f1": 0.2
+        },
+        "no_gt_fp_count": 0,
+        "avg_runtime_seconds": 0.713
+      }
+    }
+  }
+}
