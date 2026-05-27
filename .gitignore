@@ -32,8 +32,13 @@ results/runs/
 .EasyOCR/
 
 # YOLO / ultralytics model weights (auto-downloaded by ultralytics on first use)
+# Also catches the Day-3 arrow CNN cached at models/arrow_cnn.pt — regenerable.
 *.pt
 ultralytics_runs/
+
+# HuggingFace cache (CLIP weights pulled by clip_detector — regenerable)
+.cache/
+hf_home/
 
 # PaddleOCR model cache
 .paddleocr/
