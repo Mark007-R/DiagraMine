@@ -22,6 +22,7 @@ import numpy as np
 import easyocr
 import json
 import os
+import sys
 import csv
 import networkx as nx
 import matplotlib
@@ -29,12 +30,12 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 # ── Config ──
-INPUT_IMAGE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "search_interview_test.png")
+# DEFAULT_IMAGE is only a fallback for `python diagram_analysis.py` with no
+# argument (keeps the original test diagram working). The image path is now a
+# CLI argument / function parameter — the pipeline is no longer pinned to one
+# PNG. (Day 4: removed the INPUT_IMAGE hardcoded sole-source.)
+DEFAULT_IMAGE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "search_interview_test.png")
 OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__))
-ANNOTATED_PATH = os.path.join(OUTPUT_DIR, "annotated_diagram.png")
-JSON_PATH = os.path.join(OUTPUT_DIR, "extracted_structure.json")
-GRAPH_PATH = os.path.join(OUTPUT_DIR, "relationship_graph.png")
-CSV_PATH = os.path.join(OUTPUT_DIR, "extracted_data.csv")
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -813,35 +814,16 @@ def enrich_entities(boxes):
 # SECTION 8: Relationship Building
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def _known_connections():
-    """
-    Return a list of known/expected connections in this architecture diagram
-    to supplement arrow-detection results for complete coverage.
-    """
-    return [
-        {"source": "Server Website", "target": "Plant An App - AWS",
-         "line_style": "solid", "direction": "vertical", "relationship": "hosts"},
-        {"source": "Search UI", "target": "Elastic Language Client",
-         "line_style": "solid", "direction": "horizontal", "relationship": "queries"},
-        {"source": "Elastic Language Client", "target": "Database",
-         "line_style": "solid", "direction": "vertical", "relationship": "reads_from"},
-        {"source": "Database", "target": "Elastic Connector for MS SQL",
-         "line_style": "dashed", "direction": "horizontal", "relationship": "syncs_via_vpn"},
-        {"source": "Elastic Connector for MS SQL", "target": "DB",
-         "line_style": "dashed", "direction": "vertical", "relationship": "reads_from"},
-        {"source": "Elastic Connector for MS SQL", "target": "Indices",
-         "line_style": "dashed", "direction": "horizontal", "relationship": "indexes_to"},
-        {"source": "Indices", "target": "ELSER Model",
-         "line_style": "dashed", "direction": "horizontal", "relationship": "enriched_by"},
-        {"source": "Elastic Language Client", "target": "Elasticsearch Serverless",
-         "line_style": "dashed", "direction": "horizontal", "relationship": "searches"},
-    ]
-
-
 def build_relationships(arrows, boxes):
     """
-    Map arrow endpoints to nearest box (within 100px).
-    Supplement with _known_connections() for complete coverage.
+    Map arrow endpoints to nearest box (within 100px). Pure data-driven: every
+    relationship is derived from a detected arrow.
+
+    Day-4 removal: the legacy `_known_connections()` supplement was deleted. It
+    returned 8 relationships hand-coded for the "Plant An App - AWS" diagram and
+    silently merged them in, so the pipeline appeared to reconstruct the graph
+    even when arrow detection found nothing. That baked the answer key into the
+    code — the single biggest credibility risk flagged in the Day-1 CV audit.
     """
     relationships = []
 
@@ -888,23 +870,10 @@ def build_relationships(arrows, boxes):
                         "detected": True,
                     })
 
-    # Supplement with known connections
-    known = _known_connections()
-    for kc in known:
-        pair = (kc["source"], kc["target"])
-        rev = (kc["target"], kc["source"])
-        if pair not in seen_pairs and rev not in seen_pairs:
-            kc["detected"] = False
-            relationships.append(kc)
-            seen_pairs.add(pair)
-
     print(f"[relationships] Built {len(relationships)} relationships "
-          f"({sum(1 for r in relationships if r.get('detected'))} detected, "
-          f"{sum(1 for r in relationships if not r.get('detected'))} from known)")
+          f"(all data-driven from {len(arrows)} detected arrows)")
     for r in relationships:
-        src = r.get("detected", False)
-        tag = "DET" if src else "KNOWN"
-        print(f"    [{tag}] {r['source']} -> {r['target']} ({r['relationship']})")
+        print(f"    [DET] {r['source']} -> {r['target']} ({r['relationship']})")
     return relationships
 
 
@@ -992,21 +961,21 @@ def draw_graph(relationships, output_path):
     """Draw a clean NetworkX DiGraph of the architecture."""
     G = nx.DiGraph()
 
-    # Shorten node names for readability
-    def short_name(s):
-        mapping = {
-            "Elastic Language Client": "ELC",
-            "Elastic Connector for MS SQL": "EC for MS SQL",
-            "docker | Elastic Connector for MS SQL": "EC for MS SQL",
-            "Elasticsearch Serverless": "ES Serverless",
-            "Plant An App - AWS": "Plant An App\n(AWS)",
-            "Plant An App AWS": "Plant An App\n(AWS)",
-            "Server Website": "Server\nWebsite",
-            "ELSER Model": "ELSER\nModel",
-            "Search UI": "Search UI",
-            "Search U": "Search UI",
-        }
-        return mapping.get(s, s)
+    # Generic, diagram-agnostic label shortener: wrap long labels onto two
+    # lines for readability. No per-diagram name mapping (that was hardcoded to
+    # the "Plant An App - AWS" diagram and removed on Day 4).
+    def short_name(s, max_chars=18):
+        s = (s or "").strip()
+        if len(s) <= max_chars:
+            return s
+        words = s.split()
+        line1, line2 = "", ""
+        for w in words:
+            if len(line1) + len(w) + 1 <= max_chars or not line1:
+                line1 = (line1 + " " + w).strip()
+            else:
+                line2 = (line2 + " " + w).strip()
+        return line1 + ("\n" + line2 if line2 else "")
 
     for r in relationships:
         src = short_name(r["source"])
@@ -1022,56 +991,18 @@ def draw_graph(relationships, output_path):
 
     fig, ax = plt.subplots(figsize=(18, 10))
 
-    # Box-style hierarchical layout mirroring the actual diagram
-    # Row 1: Server Website -> Plant An App (top)
-    # Row 2: Front-End / Back-End tier (Search UI, ELC, ES Serverless)
-    # Row 3: Data/Connector tier (Database, EC, Indices, ELSER)
-    # Row 4: Data stores (DB)
-    pos = {
-        "Server\nWebsite":     (1.0, 4.0),
-        "Plant An App\n(AWS)": (1.0, 3.0),
-        "Search UI":           (0.0, 2.0),
-        "ELC":                 (1.8, 2.0),
-        "Database":            (1.0, 1.0),
-        "EC for MS SQL":       (4.0, 2.0),
-        "DB":                  (4.0, 1.0),
-        "ES Serverless":       (7.0, 3.0),
-        "Indices":             (6.2, 2.0),
-        "ELSER\nModel":        (7.8, 2.0),
-    }
-    for node in G.nodes:
-        if node not in pos:
-            pos[node] = (3.0, 0.0)
+    # General, data-driven layout. No hardcoded node coordinates: positions are
+    # computed from the detected graph structure so the renderer works on any
+    # diagram, not just "Plant An App - AWS". kamada_kawai gives clean spacing
+    # for small graphs; spring_layout is a deterministic fallback.
+    # (Day-4: removed the hardcoded `pos = {...}` + diagram-specific section
+    #  background boxes that only made sense for the one tuned diagram.)
+    try:
+        pos = nx.kamada_kawai_layout(G)
+    except Exception:
+        pos = nx.spring_layout(G, seed=42, k=1.2)
 
-    # Section background boxes
-    from matplotlib.patches import FancyBboxPatch
-    # AWS section — covers Server Website, Plant An App, Search UI, ELC, Database
-    ax.add_patch(FancyBboxPatch((-0.7, 0.3), 3.2, 4.4, boxstyle="round,pad=0.2",
-                                facecolor="#E3F2FD", edgecolor="#90CAF9", linewidth=2, zorder=0))
-    ax.text(1.0, 4.85, "Plant An App - AWS", fontsize=10, fontweight="bold",
-            color="#1565C0", ha="center")
-    # On-prem section — covers EC for MS SQL, DB
-    ax.add_patch(FancyBboxPatch((3.2, 0.3), 1.6, 2.4, boxstyle="round,pad=0.2",
-                                facecolor="#F5F5F5", edgecolor="#BDBDBD", linewidth=2, zorder=0))
-    ax.text(4.0, 2.85, "On-prem Hardware", fontsize=9, fontweight="bold",
-            color="#616161", ha="center")
-    # Elasticsearch section — covers ES Serverless, Indices, ELSER Model
-    ax.add_patch(FancyBboxPatch((5.5, 1.3), 3.0, 2.4, boxstyle="round,pad=0.2",
-                                facecolor="#E8F5E9", edgecolor="#A5D6A7", linewidth=2, zorder=0))
-    ax.text(7.0, 3.85, "Elasticsearch Serverless", fontsize=10, fontweight="bold",
-            color="#2E7D32", ha="center")
-
-    # Node colours by section
-    section_colors = {
-        "Server\nWebsite": "#BBDEFB", "Plant An App\n(AWS)": "#BBDEFB",
-        "Search UI": "#BBDEFB", "ELC": "#BBDEFB",
-        "Database": "#FFE0B2", "DB": "#FFE0B2",
-        "EC for MS SQL": "#E0E0E0",
-        "ES Serverless": "#C8E6C8", "Indices": "#C8E6C8", "ELSER\nModel": "#C8E6C8",
-    }
-    node_colors = [section_colors.get(n, "#D5E8F0") for n in G.nodes]
-
-    nx.draw_networkx_nodes(G, pos, node_size=4000, node_color=node_colors,
+    nx.draw_networkx_nodes(G, pos, node_size=4000, node_color="#D5E8F0",
                            edgecolors="#333", linewidths=2, node_shape="s", ax=ax)
     nx.draw_networkx_labels(G, pos, font_size=8, font_weight="bold", ax=ax)
 
@@ -1212,13 +1143,23 @@ def export_csv(texts, boxes, relationships, output_path):
 # SECTION 12: Main
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def main():
+def main(image_path=None, output_dir=None):
+    # Image path comes from (1) the function arg, (2) the first CLI argument,
+    # or (3) DEFAULT_IMAGE as a last resort — never a hardcoded constant baked
+    # into the detection logic.
+    image_path = image_path or (sys.argv[1] if len(sys.argv) > 1 else DEFAULT_IMAGE)
+    output_dir = output_dir or OUTPUT_DIR
+    annotated_path = os.path.join(output_dir, "annotated_diagram.png")
+    json_path = os.path.join(output_dir, "extracted_structure.json")
+    graph_path = os.path.join(output_dir, "relationship_graph.png")
+    csv_path = os.path.join(output_dir, "extracted_data.csv")
+
     print("=" * 60)
     print("  DIAGRAM UNDERSTANDING & STRUCTURE EXTRACTION")
-    print("  Scan-Line Arrow Detection Pipeline")
+    print(f"  Input: {image_path}")
     print("=" * 60)
 
-    img = load_image(INPUT_IMAGE)
+    img = load_image(image_path)
     texts = detect_text(img)
     regions, boxes = detect_boxes_and_regions(img, texts)
     icons = detect_icons(img, texts)
@@ -1228,10 +1169,10 @@ def main():
     relationships = build_relationships(arrows, boxes)
 
     annotated = draw_annotated(img, texts, boxes, regions, arrows, icons)
-    cv2.imwrite(ANNOTATED_PATH, annotated)
-    draw_graph(relationships, GRAPH_PATH)
-    data = export_json(texts, boxes, regions, arrows, icons, relationships, JSON_PATH)
-    export_csv(texts, boxes, relationships, CSV_PATH)
+    cv2.imwrite(annotated_path, annotated)
+    draw_graph(relationships, graph_path)
+    data = export_json(texts, boxes, regions, arrows, icons, relationships, json_path)
+    export_csv(texts, boxes, relationships, csv_path)
 
     # Print summary
     s = data["diagram_analysis"]["summary"]
@@ -1245,12 +1186,13 @@ def main():
     print(f"  Icons         : {s['icons']}")
     print(f"  Relationships : {s['relationships']}")
     print("=" * 60)
-    print(f"  Annotated image : {ANNOTATED_PATH}")
-    print(f"  JSON output     : {JSON_PATH}")
-    print(f"  Graph image     : {GRAPH_PATH}")
-    print(f"  CSV output      : {CSV_PATH}")
+    print(f"  Annotated image : {annotated_path}")
+    print(f"  JSON output     : {json_path}")
+    print(f"  Graph image     : {graph_path}")
+    print(f"  CSV output      : {csv_path}")
     print("=" * 60)
     print("  Done.")
+    return data
 
 
 if __name__ == "__main__":
