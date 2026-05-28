@@ -19,5 +19,11 @@ pytesseract>=0.3.13
 ultralytics>=8.3
 # Auto-downloads yolov8n.pt (~6 MB) into the repo root on first use.
 
+# API serving + typed schemas (Phase 3, Day 4)
+fastapi>=0.115
+uvicorn>=0.34
+python-multipart>=0.0.22
+pydantic>=2.5
+
 # Evaluation
 rapidfuzz>=3.14
