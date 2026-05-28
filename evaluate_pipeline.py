@@ -22,6 +22,16 @@ The existing `diagram_analysis.py` is NOT modified. We monkey-patch the
 module-level `INPUT_IMAGE` constant and inline-execute the pipeline. The
 deliberate hardcoding (`_known_connections`, hardcoded `pos`) stays in
 place for Day 1 measurement — Day 4 removes them.
+
+FROZEN (Day 4): this is a Day-1 baseline harness. Its entire purpose was to
+measure the pipeline WITH vs WITHOUT the hardcoded `_known_connections()`. On
+Day 4 that hardcoding was deleted for good and `diagram_analysis.py` became a
+thin wrapper over `src/pipeline.py`, so the legacy stage functions and the
+`_known_connections` symbol this harness monkey-patches no longer exist. The
+Day-1 results it produced are preserved in `results/baseline_metrics.json`.
+To re-evaluate the de-hardcoded pipeline, use `evaluate_phase2a.py` /
+`evaluate_phase2b.py` and `src/pipeline.py` instead. Running this file now
+exits with the explanation below rather than crashing on a missing symbol.
 """
 
 from __future__ import annotations
@@ -43,6 +53,15 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, ROOT)
 
 import diagram_analysis as da  # noqa: E402
+
+if not hasattr(da, "_known_connections"):
+    sys.exit(
+        "evaluate_pipeline.py is a FROZEN Day-1 baseline harness.\n"
+        "The hardcoded _known_connections() it measures was removed on Day 4;\n"
+        "diagram_analysis.py is now a thin wrapper over src/pipeline.py.\n"
+        "Day-1 results are saved in results/baseline_metrics.json.\n"
+        "Use evaluate_phase2a.py / evaluate_phase2b.py / src.pipeline to re-run."
+    )
 
 EVAL_DIR = os.path.join(ROOT, "data", "eval")
 DIAGRAMS_DIR = os.path.join(EVAL_DIR, "diagrams_15")
