@@ -84,17 +84,82 @@ def _midpoint_inside_any_box(arrow: dict, boxes: List[dict]) -> bool:
     return any(_point_in_box(mx, my, b) for b in boxes)
 
 
+def _ray_aabb_t(ox: float, oy: float, dx: float, dy: float, b: dict) -> Optional[float]:
+    """Slab ray/AABB intersection. Returns the entry distance t>=0 along the
+    unit ray (ox,oy)+t*(dx,dy) at which the ray enters box `b`, or None if it
+    never does. Handles axis-aligned rays (dx or dy == 0)."""
+    minx, miny = b["x"], b["y"]
+    maxx, maxy = b["x"] + b["w"], b["y"] + b["h"]
+    tmin, tmax = 0.0, float("inf")
+    for o, d, lo, hi in ((ox, dx, minx, maxx), (oy, dy, miny, maxy)):
+        if abs(d) < 1e-9:
+            if o < lo or o > hi:
+                return None
+        else:
+            t1, t2 = (lo - o) / d, (hi - o) / d
+            if t1 > t2:
+                t1, t2 = t2, t1
+            tmin = max(tmin, t1)
+            tmax = min(tmax, t2)
+            if tmin > tmax:
+                return None
+    return tmin if tmax >= 0 else None
+
+
+def _box_along_ray(x: float, y: float, dx: float, dy: float,
+                   boxes: List[dict], max_proj: float) -> Optional[int]:
+    """Index of the first box the outward ray from (x,y) along (dx,dy) enters,
+    within `max_proj` px. This is the 'intersection-with-box' recovery: a short
+    detected segment that stops in whitespace still *points at* its true target
+    box, so we project the line and snap to the box it would hit."""
+    norm = float(np.hypot(dx, dy))
+    if norm < 1e-9:
+        return None
+    ux, uy = dx / norm, dy / norm
+    best_i, best_t = None, max_proj
+    for i, b in enumerate(boxes):
+        t = _ray_aabb_t(x, y, ux, uy, b)
+        if t is not None and 0.0 <= t < best_t:
+            best_t, best_i = t, i
+    return best_i
+
+
+def _assign_endpoint(x: float, y: float, ox: float, oy: float,
+                     boxes: List[dict], max_dist: float,
+                     ray_intersection: bool, max_proj: float) -> Optional[int]:
+    """Map an arrow endpoint (x,y) to a box. (ox,oy) is the *other* endpoint,
+    used to compute the outward direction for the ray fallback. Try the nearest
+    box within `max_dist` first (precise when the endpoint sits on/near a box);
+    if nothing is close enough and `ray_intersection` is on, project the line
+    outward and snap to the box it enters."""
+    i = _nearest_box(x, y, boxes, max_dist)
+    if i is not None:
+        return i
+    if ray_intersection:
+        return _box_along_ray(x, y, x - ox, y - oy, boxes, max_proj)
+    return None
+
+
 def build_relationships(
     arrows: List[dict],
     boxes: List[dict],
     outside_box_gate: bool = True,
     max_dist: float = 120.0,
+    ray_intersection: bool = False,
+    max_proj: float = 400.0,
 ) -> List[dict]:
     """Build relationships purely from detected arrows. No hardcoded edges.
 
-    For each arrow, snap each endpoint to the nearest labelled box and emit an
-    unordered, de-duplicated (source -> target) edge. With `outside_box_gate`,
-    arrows whose midpoint lies inside/on a box are dropped (border artifacts).
+    For each arrow, snap each endpoint to a labelled box and emit an unordered,
+    de-duplicated (source -> target) edge. With `outside_box_gate`, arrows whose
+    midpoint lies inside/on a box are dropped (border artifacts).
+
+    Day-5 arrow-mapping fix (`ray_intersection`): error analysis found the
+    dominant failure mode is arrow-mapping, and within it ~40% of missed
+    connections are *mis-mapped* short segments whose endpoints stop in
+    whitespace beyond `max_dist`. With `ray_intersection` on, an endpoint that
+    has no box within `max_dist` is projected outward along the segment's
+    direction and snapped to the first box the ray enters (within `max_proj`).
     """
     # Endpoints map to component boxes (skip region/container boxes and
     # platform background boxes — they swallow endpoints and create spurious
@@ -113,8 +178,10 @@ def build_relationships(
     for a in arrows:
         if outside_box_gate and _midpoint_inside_any_box(a, candidates):
             continue
-        si = _nearest_box(a["x1"], a["y1"], candidates, max_dist)
-        ti = _nearest_box(a["x2"], a["y2"], candidates, max_dist)
+        si = _assign_endpoint(a["x1"], a["y1"], a["x2"], a["y2"],
+                              candidates, max_dist, ray_intersection, max_proj)
+        ti = _assign_endpoint(a["x2"], a["y2"], a["x1"], a["y1"],
+                              candidates, max_dist, ray_intersection, max_proj)
         if si is None or ti is None or si == ti:
             continue
         src = candidates[si].get("label", "").strip()

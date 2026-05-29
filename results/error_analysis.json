@@ -1,0 +1,559 @@
+{
+  "metadata": {
+    "date": "2026-05-29",
+    "day": 5,
+    "project": "DiagraMine",
+    "diagrams_scored": 14,
+    "champion_config": {
+      "text_detector": "easyocr",
+      "box_detector": "canny_contours",
+      "arrow_detector": "hough_lines",
+      "icon_detector": "template_matching",
+      "outside_box_gate": true,
+      "graph_layout": "kamada_kawai"
+    }
+  },
+  "aggregate_failures": {
+    "text": 6,
+    "box": 1,
+    "arrow": 58,
+    "icon": 0
+  },
+  "failure_shares": {
+    "text": 0.092,
+    "box": 0.015,
+    "arrow": 0.892,
+    "icon": 0.0
+  },
+  "dominant_failure_mode": "arrow",
+  "arrow_breakdown": {
+    "not_detected": 28,
+    "mis_mapped": 18,
+    "fp": 12,
+    "fn": 46,
+    "tp": 6,
+    "gt": 52
+  },
+  "box_breakdown": {
+    "fn": 1,
+    "fp": 0,
+    "merges": 0,
+    "region_misflag": 27
+  },
+  "per_diagram": [
+    {
+      "diagram": "diagram_01.png",
+      "text": {
+        "gt": 4,
+        "fn": 0,
+        "missed": []
+      },
+      "box": {
+        "gt": 4,
+        "detected_raw": 3,
+        "detected_components": 1,
+        "fn": 1,
+        "fp": 0,
+        "merges": 0,
+        "region_misflag": 2
+      },
+      "arrow": {
+        "gt": 3,
+        "detected": 0,
+        "tp": 0,
+        "fn": 3,
+        "fp": 0,
+        "missed_not_detected": 3,
+        "missed_mis_mapped": 0
+      },
+      "icon": {
+        "gt": 0,
+        "fn": 0
+      },
+      "failures": {
+        "text": 0,
+        "box": 1,
+        "arrow": 3,
+        "icon": 0
+      }
+    },
+    {
+      "diagram": "diagram_02.png",
+      "text": {
+        "gt": 6,
+        "fn": 0,
+        "missed": []
+      },
+      "box": {
+        "gt": 6,
+        "detected_raw": 6,
+        "detected_components": 3,
+        "fn": 0,
+        "fp": 0,
+        "merges": 0,
+        "region_misflag": 3
+      },
+      "arrow": {
+        "gt": 5,
+        "detected": 1,
+        "tp": 0,
+        "fn": 5,
+        "fp": 1,
+        "missed_not_detected": 2,
+        "missed_mis_mapped": 3
+      },
+      "icon": {
+        "gt": 0,
+        "fn": 0
+      },
+      "failures": {
+        "text": 0,
+        "box": 0,
+        "arrow": 6,
+        "icon": 0
+      }
+    },
+    {
+      "diagram": "diagram_03.png",
+      "text": {
+        "gt": 6,
+        "fn": 1,
+        "missed": [
+          "Message Broker"
+        ]
+      },
+      "box": {
+        "gt": 6,
+        "detected_raw": 6,
+        "detected_components": 2,
+        "fn": 0,
+        "fp": 0,
+        "merges": 0,
+        "region_misflag": 4
+      },
+      "arrow": {
+        "gt": 5,
+        "detected": 0,
+        "tp": 0,
+        "fn": 5,
+        "fp": 0,
+        "missed_not_detected": 4,
+        "missed_mis_mapped": 1
+      },
+      "icon": {
+        "gt": 0,
+        "fn": 0
+      },
+      "failures": {
+        "text": 1,
+        "box": 0,
+        "arrow": 5,
+        "icon": 0
+      }
+    },
+    {
+      "diagram": "diagram_04.png",
+      "text": {
+        "gt": 4,
+        "fn": 3,
+        "missed": [
+          "S3 Source",
+          "Lambda Func",
+          "Glue Job"
+        ]
+      },
+      "box": {
+        "gt": 4,
+        "detected_raw": 4,
+        "detected_components": 0,
+        "fn": 0,
+        "fp": 0,
+        "merges": 0,
+        "region_misflag": 4
+      },
+      "arrow": {
+        "gt": 3,
+        "detected": 1,
+        "tp": 0,
+        "fn": 3,
+        "fp": 1,
+        "missed_not_detected": 0,
+        "missed_mis_mapped": 3
+      },
+      "icon": {
+        "gt": 0,
+        "fn": 0
+      },
+      "failures": {
+        "text": 3,
+        "box": 0,
+        "arrow": 4,
+        "icon": 0
+      }
+    },
+    {
+      "diagram": "diagram_05.png",
+      "text": {
+        "gt": 5,
+        "fn": 0,
+        "missed": []
+      },
+      "box": {
+        "gt": 5,
+        "detected_raw": 5,
+        "detected_components": 4,
+        "fn": 0,
+        "fp": 0,
+        "merges": 0,
+        "region_misflag": 1
+      },
+      "arrow": {
+        "gt": 4,
+        "detected": 1,
+        "tp": 1,
+        "fn": 3,
+        "fp": 0,
+        "missed_not_detected": 2,
+        "missed_mis_mapped": 1
+      },
+      "icon": {
+        "gt": 0,
+        "fn": 0
+      },
+      "failures": {
+        "text": 0,
+        "box": 0,
+        "arrow": 3,
+        "icon": 0
+      }
+    },
+    {
+      "diagram": "diagram_06.png",
+      "text": {
+        "gt": 5,
+        "fn": 0,
+        "missed": []
+      },
+      "box": {
+        "gt": 5,
+        "detected_raw": 5,
+        "detected_components": 4,
+        "fn": 0,
+        "fp": 0,
+        "merges": 0,
+        "region_misflag": 1
+      },
+      "arrow": {
+        "gt": 4,
+        "detected": 2,
+        "tp": 1,
+        "fn": 3,
+        "fp": 1,
+        "missed_not_detected": 2,
+        "missed_mis_mapped": 1
+      },
+      "icon": {
+        "gt": 0,
+        "fn": 0
+      },
+      "failures": {
+        "text": 0,
+        "box": 0,
+        "arrow": 4,
+        "icon": 0
+      }
+    },
+    {
+      "diagram": "diagram_07.png",
+      "text": {
+        "gt": 4,
+        "fn": 0,
+        "missed": []
+      },
+      "box": {
+        "gt": 4,
+        "detected_raw": 4,
+        "detected_components": 3,
+        "fn": 0,
+        "fp": 0,
+        "merges": 0,
+        "region_misflag": 1
+      },
+      "arrow": {
+        "gt": 3,
+        "detected": 1,
+        "tp": 0,
+        "fn": 3,
+        "fp": 1,
+        "missed_not_detected": 2,
+        "missed_mis_mapped": 1
+      },
+      "icon": {
+        "gt": 0,
+        "fn": 0
+      },
+      "failures": {
+        "text": 0,
+        "box": 0,
+        "arrow": 4,
+        "icon": 0
+      }
+    },
+    {
+      "diagram": "diagram_08.png",
+      "text": {
+        "gt": 3,
+        "fn": 0,
+        "missed": []
+      },
+      "box": {
+        "gt": 3,
+        "detected_raw": 3,
+        "detected_components": 3,
+        "fn": 0,
+        "fp": 0,
+        "merges": 0,
+        "region_misflag": 0
+      },
+      "arrow": {
+        "gt": 3,
+        "detected": 1,
+        "tp": 1,
+        "fn": 2,
+        "fp": 0,
+        "missed_not_detected": 2,
+        "missed_mis_mapped": 0
+      },
+      "icon": {
+        "gt": 0,
+        "fn": 0
+      },
+      "failures": {
+        "text": 0,
+        "box": 0,
+        "arrow": 2,
+        "icon": 0
+      }
+    },
+    {
+      "diagram": "diagram_09.png",
+      "text": {
+        "gt": 4,
+        "fn": 1,
+        "missed": [
+          "Transform"
+        ]
+      },
+      "box": {
+        "gt": 4,
+        "detected_raw": 4,
+        "detected_components": 0,
+        "fn": 0,
+        "fp": 0,
+        "merges": 0,
+        "region_misflag": 4
+      },
+      "arrow": {
+        "gt": 3,
+        "detected": 0,
+        "tp": 0,
+        "fn": 3,
+        "fp": 0,
+        "missed_not_detected": 0,
+        "missed_mis_mapped": 3
+      },
+      "icon": {
+        "gt": 0,
+        "fn": 0
+      },
+      "failures": {
+        "text": 1,
+        "box": 0,
+        "arrow": 3,
+        "icon": 0
+      }
+    },
+    {
+      "diagram": "diagram_10.png",
+      "text": {
+        "gt": 5,
+        "fn": 0,
+        "missed": []
+      },
+      "box": {
+        "gt": 5,
+        "detected_raw": 5,
+        "detected_components": 4,
+        "fn": 0,
+        "fp": 0,
+        "merges": 0,
+        "region_misflag": 1
+      },
+      "arrow": {
+        "gt": 4,
+        "detected": 2,
+        "tp": 0,
+        "fn": 4,
+        "fp": 2,
+        "missed_not_detected": 2,
+        "missed_mis_mapped": 2
+      },
+      "icon": {
+        "gt": 0,
+        "fn": 0
+      },
+      "failures": {
+        "text": 0,
+        "box": 0,
+        "arrow": 6,
+        "icon": 0
+      }
+    },
+    {
+      "diagram": "diagram_11.png",
+      "text": {
+        "gt": 5,
+        "fn": 0,
+        "missed": []
+      },
+      "box": {
+        "gt": 5,
+        "detected_raw": 5,
+        "detected_components": 4,
+        "fn": 0,
+        "fp": 0,
+        "merges": 0,
+        "region_misflag": 1
+      },
+      "arrow": {
+        "gt": 4,
+        "detected": 2,
+        "tp": 1,
+        "fn": 3,
+        "fp": 1,
+        "missed_not_detected": 3,
+        "missed_mis_mapped": 0
+      },
+      "icon": {
+        "gt": 0,
+        "fn": 0
+      },
+      "failures": {
+        "text": 0,
+        "box": 0,
+        "arrow": 4,
+        "icon": 0
+      }
+    },
+    {
+      "diagram": "diagram_12.png",
+      "text": {
+        "gt": 4,
+        "fn": 1,
+        "missed": [
+          "Circuit Breaker"
+        ]
+      },
+      "box": {
+        "gt": 4,
+        "detected_raw": 4,
+        "detected_components": 0,
+        "fn": 0,
+        "fp": 0,
+        "merges": 0,
+        "region_misflag": 4
+      },
+      "arrow": {
+        "gt": 3,
+        "detected": 2,
+        "tp": 0,
+        "fn": 3,
+        "fp": 2,
+        "missed_not_detected": 0,
+        "missed_mis_mapped": 3
+      },
+      "icon": {
+        "gt": 0,
+        "fn": 0
+      },
+      "failures": {
+        "text": 1,
+        "box": 0,
+        "arrow": 5,
+        "icon": 0
+      }
+    },
+    {
+      "diagram": "diagram_13.png",
+      "text": {
+        "gt": 5,
+        "fn": 0,
+        "missed": []
+      },
+      "box": {
+        "gt": 5,
+        "detected_raw": 5,
+        "detected_components": 5,
+        "fn": 0,
+        "fp": 0,
+        "merges": 0,
+        "region_misflag": 0
+      },
+      "arrow": {
+        "gt": 4,
+        "detected": 4,
+        "tp": 2,
+        "fn": 2,
+        "fp": 2,
+        "missed_not_detected": 2,
+        "missed_mis_mapped": 0
+      },
+      "icon": {
+        "gt": 0,
+        "fn": 0
+      },
+      "failures": {
+        "text": 0,
+        "box": 0,
+        "arrow": 4,
+        "icon": 0
+      }
+    },
+    {
+      "diagram": "diagram_14.png",
+      "text": {
+        "gt": 5,
+        "fn": 0,
+        "missed": []
+      },
+      "box": {
+        "gt": 5,
+        "detected_raw": 5,
+        "detected_components": 4,
+        "fn": 0,
+        "fp": 0,
+        "merges": 0,
+        "region_misflag": 1
+      },
+      "arrow": {
+        "gt": 4,
+        "detected": 1,
+        "tp": 0,
+        "fn": 4,
+        "fp": 1,
+        "missed_not_detected": 4,
+        "missed_mis_mapped": 0
+      },
+      "icon": {
+        "gt": 0,
+        "fn": 0
+      },
+      "failures": {
+        "text": 0,
+        "box": 0,
+        "arrow": 5,
+        "icon": 0
+      }
+    }
+  ]
+}

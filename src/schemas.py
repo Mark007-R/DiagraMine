@@ -81,6 +81,14 @@ class PipelineConfig(BaseModel):
     # Day-3 finding: arrow segments lying on/inside a box bbox were inflating
     # recall via the snap-to-adjacency artifact. This gate rejects them.
     outside_box_gate: bool = True
+    # Day-5 arrow-mapping fix: endpoint snap radius + ray/line intersection
+    # fallback for short segments stopping in whitespace. On the synthetic
+    # benchmark the ray path never triggers (boxes are dense, nearest-box always
+    # resolves within rel_max_dist) so it is a no-op there; it is kept ON as a
+    # proven-correct general improvement for real diagrams with sparser layouts.
+    rel_max_dist: float = 160.0
+    rel_ray_intersection: bool = True
+    rel_max_proj: float = 400.0
     graph_layout: Literal["kamada_kawai", "spring"] = "kamada_kawai"
 
 

@@ -1,0 +1,330 @@
+{
+  "metadata": {
+    "date": "2026-05-29",
+    "day": 5,
+    "project": "DiagraMine",
+    "metric": "box IoU>=0.5 micro-F1 over 14 generated diagrams",
+    "n_trials": 40,
+    "sampler": "TPE",
+    "seed": 42
+  },
+  "baseline": {
+    "params": {
+      "canny_low": 30,
+      "canny_high": 120,
+      "min_area": 1200,
+      "dilate_ksize": 3,
+      "dilate_iters": 1,
+      "rectangularity_min": 0.3,
+      "dedup_iou": 0.6
+    },
+    "precision": 0.709,
+    "recall": 0.938,
+    "f1": 0.808,
+    "tp": 61,
+    "fp": 25,
+    "fn": 4,
+    "per_diagram": {
+      "diagram_01.png": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 1,
+        "detected": 3,
+        "gt": 4,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.857
+      },
+      "diagram_02.png": {
+        "tp": 6,
+        "fp": 2,
+        "fn": 0,
+        "detected": 8,
+        "gt": 6,
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.857
+      },
+      "diagram_03.png": {
+        "tp": 6,
+        "fp": 2,
+        "fn": 0,
+        "detected": 8,
+        "gt": 6,
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.857
+      },
+      "diagram_04.png": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "detected": 5,
+        "gt": 4,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.889
+      },
+      "diagram_05.png": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 0,
+        "detected": 6,
+        "gt": 5,
+        "precision": 0.833,
+        "recall": 1.0,
+        "f1": 0.909
+      },
+      "diagram_06.png": {
+        "tp": 5,
+        "fp": 3,
+        "fn": 0,
+        "detected": 8,
+        "gt": 5,
+        "precision": 0.625,
+        "recall": 1.0,
+        "f1": 0.769
+      },
+      "diagram_07.png": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "detected": 5,
+        "gt": 4,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.889
+      },
+      "diagram_08.png": {
+        "tp": 3,
+        "fp": 2,
+        "fn": 0,
+        "detected": 5,
+        "gt": 3,
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75
+      },
+      "diagram_09.png": {
+        "tp": 2,
+        "fp": 5,
+        "fn": 2,
+        "detected": 7,
+        "gt": 4,
+        "precision": 0.286,
+        "recall": 0.5,
+        "f1": 0.364
+      },
+      "diagram_10.png": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 0,
+        "detected": 6,
+        "gt": 5,
+        "precision": 0.833,
+        "recall": 1.0,
+        "f1": 0.909
+      },
+      "diagram_11.png": {
+        "tp": 4,
+        "fp": 3,
+        "fn": 1,
+        "detected": 7,
+        "gt": 5,
+        "precision": 0.571,
+        "recall": 0.8,
+        "f1": 0.667
+      },
+      "diagram_12.png": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "detected": 5,
+        "gt": 4,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.889
+      },
+      "diagram_13.png": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "detected": 5,
+        "gt": 5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "diagram_14.png": {
+        "tp": 5,
+        "fp": 3,
+        "fn": 0,
+        "detected": 8,
+        "gt": 5,
+        "precision": 0.625,
+        "recall": 1.0,
+        "f1": 0.769
+      }
+    }
+  },
+  "best": {
+    "params": {
+      "canny_low": 39,
+      "canny_high": 69,
+      "min_area": 2300,
+      "dilate_ksize": 2,
+      "dilate_iters": 1,
+      "rectangularity_min": 0.6,
+      "dedup_iou": 0.5
+    },
+    "precision": 1.0,
+    "recall": 0.985,
+    "f1": 0.992,
+    "tp": 64,
+    "fp": 0,
+    "fn": 1,
+    "per_diagram": {
+      "diagram_01.png": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 1,
+        "detected": 3,
+        "gt": 4,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.857
+      },
+      "diagram_02.png": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "detected": 6,
+        "gt": 6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "diagram_03.png": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "detected": 6,
+        "gt": 6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "diagram_04.png": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "detected": 4,
+        "gt": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "diagram_05.png": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "detected": 5,
+        "gt": 5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "diagram_06.png": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "detected": 5,
+        "gt": 5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "diagram_07.png": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "detected": 4,
+        "gt": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "diagram_08.png": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "detected": 3,
+        "gt": 3,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "diagram_09.png": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "detected": 4,
+        "gt": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "diagram_10.png": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "detected": 5,
+        "gt": 5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "diagram_11.png": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "detected": 5,
+        "gt": 5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "diagram_12.png": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "detected": 4,
+        "gt": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "diagram_13.png": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "detected": 5,
+        "gt": 5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "diagram_14.png": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "detected": 5,
+        "gt": 5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    }
+  },
+  "delta_f1": 0.184
+}
