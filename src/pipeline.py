@@ -125,7 +125,11 @@ def extract(image_path: str, config: PipelineConfig | None = None) -> Extraction
     g0 = time.perf_counter()
     raw_boxes = builder.label_boxes(raw_boxes, raw_texts)
     raw_rels = builder.build_relationships(
-        raw_arrows, raw_boxes, outside_box_gate=config.outside_box_gate
+        raw_arrows, raw_boxes,
+        outside_box_gate=config.outside_box_gate,
+        max_dist=config.rel_max_dist,
+        ray_intersection=config.rel_ray_intersection,
+        max_proj=config.rel_max_proj,
     )
     rt_graph = time.perf_counter() - g0
 
@@ -142,6 +146,8 @@ def extract(image_path: str, config: PipelineConfig | None = None) -> Extraction
             "arrow": config.arrow_detector,
             "icon": config.icon_detector,
             "outside_box_gate": config.outside_box_gate,
+            "rel_max_dist": config.rel_max_dist,
+            "rel_ray_intersection": config.rel_ray_intersection,
             "errors": {k: v for k, v in {
                 "text": err_text, "box": err_box,
                 "arrow": err_arrow, "icon": err_icon,
