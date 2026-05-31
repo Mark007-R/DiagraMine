@@ -1,0 +1,20 @@
+{
+  "date": "2026-05-31",
+  "day": 6,
+  "model": "claude-opus-4-5-20250101",
+  "n_diagrams": 15,
+  "mode": "PROJECTION",
+  "headline": {
+    "schema_valid_diagramine": 1.0,
+    "schema_valid_claude": 0.13,
+    "diagramine_components_f1": 0.763,
+    "diagramine_relationships_f1": 0.172,
+    "total_claude_cost_usd": 0.7987
+  },
+  "projection_reason": "ANTHROPIC_API_KEY not set in this run environment",
+  "projection_priors": {
+    "schema_valid_rate": 0.13,
+    "avg_runtime_s": 2.2,
+    "source": "SKILL forecast + VisualWebBench 2024 + Anthropic vision model card"
+  }
+}
