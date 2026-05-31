@@ -1,0 +1,44 @@
+### REPRESENTATIVE PROJECTED RESPONSE — NOT A LIVE CAPTURE ###
+
+The autonomous Day-6 run was executed without ANTHROPIC_API_KEY in the run
+environment, so the harness ran in PROJECTION mode using the SKILL-published
+prior of ~13% schema-valid JSON rate for vision LLMs under strict prompting.
+
+The text below is the kind of prose-wrapped JSON that drives the ~85% strict-
+parse failure rate. It is illustrative ONLY — `benchmark_claude_vision.py`
+overwrites this file with real captured responses when run with credentials.
+
+Strict parser failure mode: the response is not valid JSON because of the
+preamble + markdown fences. A lenient regex can still recover the inner
+{...} block for P/R scoring, but the strict reliability metric — the one
+downstream pipelines depend on — counts this as a failure.
+
+────────────────────────────────────────────────────────────
+Sure, I can analyze this architecture diagram for you. Here is
+the structured output:
+
+```json
+{
+  "components": [
+    "Client App",
+    "API Gateway",
+    "User Svc",
+    "Order Svc",
+    "Payment Svc",
+    "Orders DB"
+  ],
+  "arrows": [
+    {"source": "Client App", "target": "API Gateway"},
+    {"source": "API Gateway", "target": "User Svc"},
+    {"source": "API Gateway", "target": "Order Svc"},
+    {"source": "API Gateway", "target": "Payment Svc"},
+    {"source": "Order Svc", "target": "Orders DB"}
+  ],
+  "icons": []
+}
+```
+
+The diagram shows a microservices pattern with an API gateway routing
+client requests to three service backends, with Order Svc persisting to
+its own database.
+────────────────────────────────────────────────────────────
