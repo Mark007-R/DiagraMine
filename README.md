@@ -1,5 +1,7 @@
 # DiagraMine
 
+> 🔗 **Live API:** https://iambatman07-diagramine.hf.space — try `/health` and `/extract` · [HF Space](https://huggingface.co/spaces/IamBatman07/DiagraMine)
+
 **Diagram structure extraction — components, arrows, icons, relationships — that always returns machine-parseable JSON.**
 
 DiagraMine takes an architecture diagram image and emits a typed, schema-valid JSON object: every component, every arrow, every relationship, every icon. The reliability claim is concrete: across the 15-diagram public benchmark, the pipeline returns strict-parseable JSON on **15 of 15 inputs (1.000)**, compared to Claude Vision under strict JSON-only prompting at a projected **0.130** (SKILL forecast + [VisualWebBench 2024](https://arxiv.org/abs/2404.05955) + Anthropic vision model card). The accuracy gap moves with hyperparameters; the reliability gap is structural — DiagraMine outputs are typed Pydantic models, validated by construction.
