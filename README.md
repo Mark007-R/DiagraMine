@@ -1,10 +1,10 @@
-# DiagraMine
+# Diagram-Structure-Extractor
 
 > 🔗 **Live API:** https://iambatman07-diagramine.hf.space — try `/health` and `/extract` · [HF Space](https://huggingface.co/spaces/IamBatman07/DiagraMine)
 
 **Diagram structure extraction — components, arrows, icons, relationships — that always returns machine-parseable JSON.**
 
-DiagraMine takes an architecture diagram image and emits a typed, schema-valid JSON object: every component, every arrow, every relationship, every icon. The reliability claim is concrete: across the 15-diagram public benchmark, the pipeline returns strict-parseable JSON on **15 of 15 inputs (1.000)**, compared to Claude Vision under strict JSON-only prompting at a projected **0.130** (SKILL forecast + [VisualWebBench 2024](https://arxiv.org/abs/2404.05955) + Anthropic vision model card). The accuracy gap moves with hyperparameters; the reliability gap is structural — DiagraMine outputs are typed Pydantic models, validated by construction.
+Diagram-Structure-Extractor takes an architecture diagram image and emits a typed, schema-valid JSON object: every component, every arrow, every relationship, every icon. The reliability claim is concrete: across the 15-diagram public benchmark, the pipeline returns strict-parseable JSON on **15 of 15 inputs (1.000)**, compared to Claude Vision under strict JSON-only prompting at a projected **0.130** (SKILL forecast + [VisualWebBench 2024](https://arxiv.org/abs/2404.05955) + Anthropic vision model card). The accuracy gap moves with hyperparameters; the reliability gap is structural — Diagram-Structure-Extractor outputs are typed Pydantic models, validated by construction.
 
 > Downstream consumers (RAG indexers, knowledge-graph builders, search pipelines) need machine-parseable structure on **every** call, not 13% of calls.
 
@@ -12,15 +12,15 @@ DiagraMine takes an architecture diagram image and emits a typed, schema-valid J
 
 ## Headline benchmark
 
-| Metric (15-diagram public benchmark) | DiagraMine (measured) | Claude Vision Opus 4.6 (projection¹) | Winner |
+| Metric (15-diagram public benchmark) | Diagram-Structure-Extractor (measured) | Claude Vision Opus 4.6 (projection¹) | Winner |
 |---|---:|---:|:--:|
-| **Schema-valid JSON output rate** | **1.000 (15/15)** | 0.130 | DiagraMine (7.7×) |
-| Components macro-F1 | 0.763 | n/a (projected mode) | DiagraMine |
-| Relationships macro-F1 | 0.220 (Day-5 fix) | n/a (projected mode) | DiagraMine |
+| **Schema-valid JSON output rate** | **1.000 (15/15)** | 0.130 | Diagram-Structure-Extractor (7.7×) |
+| Components macro-F1 | 0.763 | n/a (projected mode) | Diagram-Structure-Extractor |
+| Relationships macro-F1 | 0.220 (Day-5 fix) | n/a (projected mode) | Diagram-Structure-Extractor |
 | Avg runtime per diagram | 15.37 s | 2.20 s | Claude Vision (7×) |
-| Cost per diagram | $0.0000 | $0.0532 | DiagraMine (∞×) |
+| Cost per diagram | $0.0000 | $0.0532 | Diagram-Structure-Extractor (∞×) |
 
-¹ The autonomous Day-6 run lacked `ANTHROPIC_API_KEY`, so the Claude Vision row uses literature-cited priors (SKILL forecast, VisualWebBench-2024, Anthropic public vision model card). The harness at `benchmark_claude_vision.py` is live-ready and will replace these projections with measured numbers when re-run with credentials. **DiagraMine's columns are real measurements and won't move.**
+¹ The autonomous Day-6 run lacked `ANTHROPIC_API_KEY`, so the Claude Vision row uses literature-cited priors (SKILL forecast, VisualWebBench-2024, Anthropic public vision model card). The harness at `benchmark_claude_vision.py` is live-ready and will replace these projections with measured numbers when re-run with credentials. **Diagram-Structure-Extractor's columns are real measurements and won't move.**
 
 See `results/frontier_comparison.csv` for the canonical table and `results/ablation.csv` for the marginal contribution of each pipeline stage.
 
@@ -193,7 +193,7 @@ python benchmark_ablation.py
 ## File map
 
 ```
-DiagraMine/
+Diagram-Structure-Extractor/
 ├── src/                         # Modular pipeline (Day-4 refactor of the 1,257-line monolith)
 │   ├── schemas.py               # Typed Pydantic models — the 1.000 schema-valid guarantee
 │   ├── pipeline.py              # Orchestrator with per-stage failure isolation
@@ -261,5 +261,5 @@ Each day's work is documented in `reports/dayNN_*.md`:
 | 3 | Arrow + icon detector comparison | Arrow detection is the pipeline bottleneck (honest F1 0.364). CNN-verified Hough scored higher (F1 0.434) but inspection showed the lift was a box-adjacency snap artifact — surfaced as a finding, not promoted. |
 | 4 | Champion integration + REMOVE HARDCODING | `_known_connections()`, hardcoded `pos = {...}`, and `INPUT_IMAGE` all deleted in the first refactor commit. Aggregate rel-F1 rose 0.111 → 0.172 — *deleting the answer key raised the honest score.* |
 | 5 | Box tuning + error analysis | Canny+contours box F1 0.808 → 0.992 with Optuna. Arrow-mapping is the dominant failure mode (89%). Ray-intersection fix lifts rel-F1 0.171 → 0.250. |
-| 6 | Frontier vs Claude Vision + ablation | DiagraMine schema-valid 1.000 (measured) vs Claude Vision 0.130 (projected). The outside-box gate costs -0.077 on synthetic-clean diagrams while lifting real-diagram by +0.344 — calibration trade-off documented. |
+| 6 | Frontier vs Claude Vision + ablation | Diagram-Structure-Extractor schema-valid 1.000 (measured) vs Claude Vision 0.130 (projected). The outside-box gate costs -0.077 on synthetic-clean diagrams while lifting real-diagram by +0.344 — calibration trade-off documented. |
 | 7 | Production wrapper + tests + demo + README | Dockerfile + Streamlit + 25 pytest tests (incl. no-hardcoding regression). README rewrite (this file). 21-day sprint arc closer in `POSTS_LOG.md`. |
