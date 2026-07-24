@@ -1,6 +1,6 @@
 # Diagram-Structure-Extractor
 
-> 🔗 **Live API:** https://iambatman07-diagramine.hf.space — try `/health` and `/extract` · [HF Space](https://huggingface.co/spaces/IamBatman07/DiagraMine)
+> 🔗 **Live API:** https://iambatman07-diagram-structure-extractor.hf.space — try `/health` and `/extract` · [HF Space](https://huggingface.co/spaces/IamBatman07/Diagram-Structure-Extractor)
 
 **Diagram structure extraction — components, arrows, icons, relationships — that always returns machine-parseable JSON.**
 
