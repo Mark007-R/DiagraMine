@@ -22,7 +22,7 @@ Diagram-Structure-Extractor takes an architecture diagram image and emits a type
 
 ¹ The autonomous Day-6 run lacked `ANTHROPIC_API_KEY`, so the Claude Vision row uses literature-cited priors (SKILL forecast, VisualWebBench-2024, Anthropic public vision model card). The harness at `benchmark_claude_vision.py` is live-ready and will replace these projections with measured numbers when re-run with credentials. **Diagram-Structure-Extractor's columns are real measurements and won't move.**
 
-See `results/frontier_comparison.csv` for the canonical table and `results/ablation.csv` for the marginal contribution of each pipeline stage.
+Re-running `benchmark_claude_vision.py` and `benchmark_ablation.py` regenerates the canonical comparison table and the per-stage marginal contributions.
 
 ---
 
@@ -82,7 +82,7 @@ See `results/frontier_comparison.csv` for the canonical table and `results/ablat
 
 ## What we removed (the credibility fixes)
 
-The Day-1 audit (`docs/CV_AUDIT.md`) identified three credibility risks in the original 1,257-line monolith. All three were removed on Day 4 and the test suite (`tests/test_no_hardcoding_regression.py`) now blocks their reintroduction.
+The Day-1 audit identified three credibility risks in the original 1,257-line monolith. All three were removed on Day 4 and the test suite (`tests/test_no_hardcoding_regression.py`) now blocks their reintroduction.
 
 | What was removed | Where | Why it had to go |
 |---|---|---|
@@ -95,7 +95,7 @@ The Day-1 audit (`docs/CV_AUDIT.md`) identified three credibility risks in the o
 - Fails if any diagram-specific label (`"Plant An App"`, `"ELSER Model"`, `"Elastic Connector for MS SQL"`) appears as a string literal in code (docstrings allowed — they record what was deliberately removed).
 - Fails if a hardcoded layout dict reappears anywhere; the test requires a `nx.{kamada_kawai_layout,spring_layout}` call.
 
-Honesty trade-off the README owes the reader: **the Day-3 outside-box gate** (which lifts the original real-diagram rel-F1 from 0.545 → 0.889) costs **-0.077 rel-F1 on the 14 synthetic-clean benchmark diagrams**. The gate is calibrated for noisy real-world Hough output, not for matplotlib renders. Surfaced in `results/ablation.csv` rather than hidden.
+Honesty trade-off the README owes the reader: **the Day-3 outside-box gate** (which lifts the original real-diagram rel-F1 from 0.545 → 0.889) costs **-0.077 rel-F1 on the 14 synthetic-clean benchmark diagrams**. The gate is calibrated for noisy real-world Hough output, not for matplotlib renders. Surfaced in the ablation rather than hidden.
 
 ---
 
@@ -176,11 +176,11 @@ python benchmark_ablation.py
 
 ## Pipeline stages, in order
 
-1. **Text detection** (`src/text_detection/`) — EasyOCR is the champion (F1 0.949 on the 15-diagram benchmark, 1.90 s/img). PaddleOCR is the production alternative (F1 0.942 at 2.8× the speed). Tesseract is wired in but requires the native binary (see `docs/INSTALL_TESSERACT.md`).
+1. **Text detection** (`src/text_detection/`) — EasyOCR is the champion (F1 0.949 on the 15-diagram benchmark, 1.90 s/img). PaddleOCR is the production alternative (F1 0.942 at 2.8× the speed). Tesseract is wired in but requires the native binary installed separately.
 
 2. **Box detection** (`src/box_detection/`) — Canny + RETR_TREE contours is the champion (F1 0.992 IoU @ 0.5 after Day-5 Optuna tuning of canny thresholds + region area). Hough rectangle reconstruction was the negative-result baseline (F1 0.320 — dashed arrows produce spurious rectangles). YOLOv8n zero-shot is the LLM-style baseline (F1 0.030 — COCO has no rectangle class, confirming that specialized CV beats general vision models on abstract diagrams).
 
-3. **Arrow detection** (`src/arrow_detection/`) — Hough lines + thinning + outside-box gate is the champion (honest F1 0.364 — best of three; arrow detection is the pipeline's weakest stage). The pixel-row dashed-line scan from the original monolith hit F1 0.324. A small synthetic-data-trained CNN scored higher (F1 0.434) but Day-3 inspection found the lift came from a box-border snap artifact, not real arrow recall — that finding is recorded in `results/phase2b_arrow_icon.csv` rather than papered over.
+3. **Arrow detection** (`src/arrow_detection/`) — Hough lines + thinning + outside-box gate is the champion (honest F1 0.364 — best of three; arrow detection is the pipeline's weakest stage). The pixel-row dashed-line scan from the original monolith hit F1 0.324. A small synthetic-data-trained CNN scored higher (F1 0.434) but Day-3 inspection found the lift came from a box-border snap artifact, not real arrow recall — that finding is surfaced rather than papered over.
 
 4. **Icon detection** (`src/icon_detection/`) — Template matching wins (by-label F1 1.000 on the curated 2-template library; 0 FPs on 14 empty-GT diagrams). HSV is a pure region proposer. CLIP zero-shot finds icons but over-detects (16 FPs on the test image) without threshold tuning.
 
@@ -208,16 +208,11 @@ Diagram-Structure-Extractor/
 ├── Dockerfile + .dockerignore   # Production image (FastAPI uvicorn :8000)
 ├── data/eval/                   # 15-diagram benchmark + ground truth
 ├── tests/                       # 25 pytest tests (incl. no-hardcoding regression)
-├── docs/                        # CV_AUDIT.md, INSTALL_TESSERACT.md
-├── reports/                     # day01..day07 daily research reports
-├── results/                     # Per-day metrics + samples
-│   ├── baseline_metrics.json    # Day-1 honest CV-only baseline
-│   ├── phase2_leaderboard.csv   # Day-3 phase-2 champion table
-│   ├── box_tuning.json          # Day-5 Optuna sweep
-│   ├── error_analysis.json      # Day-5 failure-mode buckets
-│   ├── frontier_comparison.csv  # Day-6 vs Claude Vision (the headline)
-│   ├── ablation.csv             # Day-6 marginal-contribution-per-stage
-│   └── samples/                 # Annotated PNGs + JSON for every detector
+├── results/                     # Scoring harnesses; metrics are regenerated here
+│   ├── _build_leaderboard.py    # Phase-2 champion table builder
+│   ├── _schema_valid_audit.py   # Schema-validity audit
+│   ├── _make_plots.py           # Chart renderer
+│   └── _day04/_day05_*.py       # Integration checks
 ├── benchmark_claude_vision.py   # Day-6 live + projection harness
 └── benchmark_ablation.py        # Day-6 cumulative-stages ablation
 ```
@@ -252,7 +247,7 @@ MIT. See `LICENSE`.
 
 ## Audit trail
 
-Each day's headline finding, with the measurements behind it in `results/`:
+Each day's headline finding:
 
 | Day | Focus | Headline finding |
 |---|---|---|
