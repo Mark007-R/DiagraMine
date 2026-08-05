@@ -180,7 +180,7 @@ python benchmark_ablation.py
 
 2. **Box detection** (`src/box_detection/`) — Canny + RETR_TREE contours is the champion (F1 0.992 IoU @ 0.5 after Day-5 Optuna tuning of canny thresholds + region area). Hough rectangle reconstruction was the negative-result baseline (F1 0.320 — dashed arrows produce spurious rectangles). YOLOv8n zero-shot is the LLM-style baseline (F1 0.030 — COCO has no rectangle class, confirming that specialized CV beats general vision models on abstract diagrams).
 
-3. **Arrow detection** (`src/arrow_detection/`) — Hough lines + thinning + outside-box gate is the champion (honest F1 0.364 — best of three; arrow detection is the pipeline's weakest stage). The pixel-row dashed-line scan from the original monolith hit F1 0.324. A small synthetic-data-trained CNN scored higher (F1 0.434) but Day-3 inspection found the lift came from a box-border snap artifact, not real arrow recall — that finding is documented in `reports/day03_phase2_report.md` rather than papered over.
+3. **Arrow detection** (`src/arrow_detection/`) — Hough lines + thinning + outside-box gate is the champion (honest F1 0.364 — best of three; arrow detection is the pipeline's weakest stage). The pixel-row dashed-line scan from the original monolith hit F1 0.324. A small synthetic-data-trained CNN scored higher (F1 0.434) but Day-3 inspection found the lift came from a box-border snap artifact, not real arrow recall — that finding is recorded in `results/phase2b_arrow_icon.csv` rather than papered over.
 
 4. **Icon detection** (`src/icon_detection/`) — Template matching wins (by-label F1 1.000 on the curated 2-template library; 0 FPs on 14 empty-GT diagrams). HSV is a pure region proposer. CLIP zero-shot finds icons but over-detects (16 FPs on the test image) without threshold tuning.
 
@@ -252,7 +252,7 @@ MIT. See `LICENSE`.
 
 ## Audit trail
 
-Each day's work is documented in `reports/dayNN_*.md`:
+Each day's headline finding, with the measurements behind it in `results/`:
 
 | Day | Focus | Headline finding |
 |---|---|---|
@@ -262,4 +262,4 @@ Each day's work is documented in `reports/dayNN_*.md`:
 | 4 | Champion integration + REMOVE HARDCODING | `_known_connections()`, hardcoded `pos = {...}`, and `INPUT_IMAGE` all deleted in the first refactor commit. Aggregate rel-F1 rose 0.111 → 0.172 — *deleting the answer key raised the honest score.* |
 | 5 | Box tuning + error analysis | Canny+contours box F1 0.808 → 0.992 with Optuna. Arrow-mapping is the dominant failure mode (89%). Ray-intersection fix lifts rel-F1 0.171 → 0.250. |
 | 6 | Frontier vs Claude Vision + ablation | Diagram-Structure-Extractor schema-valid 1.000 (measured) vs Claude Vision 0.130 (projected). The outside-box gate costs -0.077 on synthetic-clean diagrams while lifting real-diagram by +0.344 — calibration trade-off documented. |
-| 7 | Production wrapper + tests + demo + README | Dockerfile + Streamlit + 25 pytest tests (incl. no-hardcoding regression). README rewrite (this file). 21-day sprint arc closer in `POSTS_LOG.md`. |
+| 7 | Production wrapper + tests + demo + README | Dockerfile + Streamlit + 25 pytest tests (incl. no-hardcoding regression). README rewrite (this file). |
