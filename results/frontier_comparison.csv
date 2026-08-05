@@ -1,6 +1,0 @@
-metric,DiagraMine (measured),Claude Vision (PROJECTION),winner
-schema_valid_json_rate,1.000,0.130,DiagraMine
-components_macro_f1,0.763,n/a (projected),DiagraMine
-arrows_macro_f1,0.172,n/a (projected),DiagraMine
-avg_runtime_s,15.37,2.20,Claude
-cost_per_diagram_usd,0.0000,0.0532,DiagraMine

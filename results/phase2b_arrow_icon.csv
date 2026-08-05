@@ -1,7 +1,0 @@
-stage,detector,precision,recall,f1,secondary,avg_runtime_seconds,notes
-arrow,pixel_scan,0.545,0.231,0.324,,0.154,"unordered src/tgt pairs, 14 scored diagrams"
-arrow,hough_lines,0.383,0.346,0.364,,0.019,"unordered src/tgt pairs, 14 scored diagrams"
-arrow,cnn_verified,0.581,0.346,0.434,,0.08,"unordered src/tgt pairs, 14 scored diagrams"
-icon,hsv,0.0,0.0,0.0,presence_f1=0.19 fps_empty_gt=0,0.003,by-label fuzzy>=80; GT icons only present on search_interview_test.png
-icon,template_matching,1.0,1.0,1.0,presence_f1=1.0 fps_empty_gt=0,0.177,by-label fuzzy>=80; GT icons only present on search_interview_test.png
-icon,clip_zero_shot,0.5,1.0,0.667,presence_f1=0.2 fps_empty_gt=0,0.713,by-label fuzzy>=80; GT icons only present on search_interview_test.png
